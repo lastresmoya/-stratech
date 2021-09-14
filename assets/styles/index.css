@@ -1,0 +1,16 @@
+html,
+body {
+    height: 100%;
+}
+
+.Scroll {
+    height:600px;
+    overflow-y: scroll;
+}     
+
+@media (max-width: 768px) {
+    .transformed{
+        /* idéntico a rotateZ(45deg); */
+        transform: rotate(90deg);
+    }
+}
