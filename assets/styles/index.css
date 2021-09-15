@@ -13,4 +13,81 @@ body {
         /* idéntico a rotateZ(45deg); */
         transform: rotate(90deg);
     }
+    
+    /* @media (orientation : landscape) { 
+        .transformed{
+            transform: rotate(45deg);
+        }
+    } */
 }
+
+.Scroll::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+.Scroll::-webkit-scrollbar-track {
+  background: #DDD5D5;        /* color of the tracking area */
+  border-radius: 20px;
+}
+
+.Scroll::-webkit-scrollbar-thumb {
+  background-color: #7E8180;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #DDD5D5;  /* creates padding around scroll thumb */
+}
+
+.menu-toggle{
+    border: 1.5px solid white;
+    border-radius: 5px; 
+}
+
+.bet h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.bet2{
+    gap: 5%;
+}
+
+.bet3{
+    gap: 2%;
+}
+
+.bet-buttons button{
+    width: 120px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.stadistics button{
+    width: 139px;
+    height: 41px;
+    background-color: white;
+    border: none;
+    margin-bottom: 3%;
+    color: #475569;
+    font-size: 12px;
+}
+
+.stadistics button:hover{
+    background-color: rgb(212, 211, 211);
+    color: #475569;
+}
+
+.menu-toggle{
+    color: white;
+    font-size: 13px;
+    height: 213px;
+    width: 145px;
+}
+
+/* .hands{
+    background: rgba(15, 26, 42, 0.3);
+}
+
+.hands :hover{
+    background: rgba(15, 26, 42, 0.6);
+} */
