@@ -12,13 +12,15 @@ body {
     .transformed{
         /* idéntico a rotateZ(45deg); */
         transform: rotate(90deg);
+        margin-top: 160px;
     }
     
-    /* @media (orientation : landscape) { 
+    @media (orientation : landscape) { 
         .transformed{
-            transform: rotate(45deg);
+            transform: rotate(0deg);
+            margin-top: 0px;
         }
-    } */
+    } 
 }
 
 .Scroll::-webkit-scrollbar {
@@ -62,6 +64,55 @@ body {
     font-size: 14px;
 }
 
+@media (max-width: 768px) {
+    .bet-buttons button{
+        margin-bottom: 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .bet-buttons{
+        margin-top: 180px;
+    }
+    @media (orientation : landscape) { 
+        .bet-buttons{
+            margin-top: 0%;
+        }
+    } 
+}
+
+@media (max-width: 500px) {
+    .bet-buttons{
+        margin-top: 90px;
+    }
+
+    @media (orientation : landscape) { 
+        .bet-buttons{
+            margin-top: 0%;
+        }
+    } 
+}
+
+
+@media (max-width: 600px) {
+    .bet-buttons{
+        margin-top: 100px;
+    }
+    @media (orientation : landscape) { 
+        .bet-buttons{
+            margin-top: 0%;
+        }
+    } 
+}
+
+@media (min-width: 500px) {
+    @media (orientation : landscape) { 
+        .bet-buttons{
+            margin-top: 0%;
+        }
+    }
+}
+
 .stadistics button{
     width: 139px;
     height: 41px;
@@ -84,10 +135,111 @@ body {
     width: 145px;
 }
 
-/* .hands{
-    background: rgba(15, 26, 42, 0.3);
+.img-table{
+    width: 100%;
 }
 
-.hands :hover{
-    background: rgba(15, 26, 42, 0.6);
-} */
+@media (max-width: 600px) and (orientation: landscape) { 
+    .img-table{
+        width: 60%;
+    }
+}
+
+@media (max-width: 655px) and (orientation: landscape) { 
+    .img-table{
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 660px) and (orientation: landscape) { 
+    .img-table{
+        width: 70%;
+    }
+}
+
+@media (min-width: 800px) and (orientation: landscape) { 
+    .img-table{
+        width: 60%;
+    }
+}
+
+@media (min-width: 1280px) and (orientation: landscape) { 
+    .img-table{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) { 
+    .poker-table{
+        margin-top: 110px;
+    }
+}
+
+@media (max-width: 360px) { 
+    .poker-table{
+        margin-top: -60px;
+    }
+}
+
+@media (max-width: 320px) { 
+    .poker-table{
+        margin-top: -114px;
+    }
+}
+
+@media (max-width: 290px) { 
+    .poker-table{
+        margin-top: 15px;
+    }
+}
+
+@media (min-height: 1300px) { 
+    .poker-table{
+        margin-top: 300px;
+    }
+}
+
+@media (min-width: 1300px) and (orientation: landscape) { 
+    .poker-table{
+        margin-top: 0px;
+    }
+}
+
+.img-card{
+    width: 40%;
+}
+
+.preflop{
+    width: 100%;
+}
+
+.hero{
+    width: 80%;
+}
+
+@media (max-height: 1100px) and (orientation: landscape) { 
+    .hero{
+        font-size: 80%;
+    }
+}
+
+.utg{
+    width: 75%;
+}
+
+@media (max-height: 1100px) and (orientation: landscape) { 
+    .utg{
+        font-size: 80%;
+    }
+}
+
+.correct{
+    width: 65%;
+}
+
+@media (max-height: 1100px) and (orientation: landscape) { 
+    .correct{
+        font-size: 80%;
+    }
+}
