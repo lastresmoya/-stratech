@@ -166,15 +166,22 @@ body {
 
 @media (min-width: 1280px) and (orientation: landscape) { 
     .img-table{
-        width: 100%;
+        width: 95%;
     }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) { 
+@media (min-height: 768px) and (orientation: landscape) { 
     .poker-table{
         margin-top: 110px;
     }
 }
+
+@media (min-height: 900px) and (orientation: landscape) { 
+    .poker-table{
+        margin-top: 0px;
+    }
+}
+
 
 @media (max-width: 360px) { 
     .poker-table{
@@ -205,6 +212,12 @@ body {
         margin-top: 0px;
     }
 }
+
+/* @media (min-height: 1280px) and (min-width: 950px) {
+    .poker-table{
+        margin-top: 0px;
+    }
+} */
 
 .img-card{
     width: 40%;
@@ -242,4 +255,37 @@ body {
     .correct{
         font-size: 80%;
     }
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+.hamburguer{
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    width: 122%;
+    padding: 4px;
+    height: 34px;
+    margin-top: 8px;
+}
+
+.hamburguer:hover{
+    background-color: white;
+    border: none;
+}
+
+.btn-secondary.focus, .btn-secondary:focus {
+    background-color: white;
+    border: none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    background-color: white;
+    border: none;
+}
+
+.second{
+    transform: translate3d(-155px, 42px, 0px);
 }
