@@ -64,6 +64,15 @@ body {
     font-size: 14px;
 }
 
+@media (min-height: 1600px) {
+    .bet-buttons button{
+        width: 180px;
+        height: 80px;
+        font-weight: 700;
+        font-size: 28px;
+    }
+}
+
 @media (max-width: 768px) {
     .bet-buttons button{
         margin-bottom: 3%;
@@ -123,6 +132,15 @@ body {
     font-size: 12px;
 }
 
+@media (min-height: 1600px) {
+    .stadistics button{
+        width: 280px;
+        height: 82px;
+        font-weight: 700;
+        font-size: 28px;
+    }
+}
+
 .stadistics button:hover{
     background-color: rgb(212, 211, 211);
     color: #475569;
@@ -133,6 +151,15 @@ body {
     font-size: 13px;
     height: 213px;
     width: 145px;
+}
+
+@media (min-height: 1600px) {
+    .menu-toggle{
+        width: 280px;
+        height: 325px;
+        font-weight: 500;
+        font-size: 28px;
+    }
 }
 
 .img-table{
