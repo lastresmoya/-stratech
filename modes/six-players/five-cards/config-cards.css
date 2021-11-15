@@ -1,0 +1,47 @@
+.order-two .Player--cards,
+.order-three .Player--cards,
+.order-four .Player--cards {
+	left: 25%;
+	right: initial;
+}
+
+.order-five .Player--cards,
+.order-six .Player--cards {
+	right: 25%;
+	left: initial;
+}
+
+@media screen and (orientation: landscape) {
+
+	.order-one .Player--cards,
+	.order-two .Player--cards,
+	.order-six .Player--cards {
+		left: 25%;
+		right: initial;
+	}
+
+	.order-three .Player--cards,
+	.order-four .Player--cards,
+	.order-five .Player--cards {
+		right: 25%;
+		left: initial;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.HandCard--dealt-cards {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+.order-one .Player--cards {
+	left: 5%;
+	right: initial;
+}
+
+@media screen and (orientation: landscape) {
+	.order-one .Player--cards {
+		left: 0;
+		right: initial;
+	}
+}

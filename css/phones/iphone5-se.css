@@ -1,0 +1,41 @@
+@media (orientation: landscape) and (max-width: 568px) {
+	.Player--container {
+		--padding-money: .3rem;
+		padding-right: 0;
+		width: auto;
+	}
+
+	.Player--money>* {
+		font-size: 7px;
+	}
+
+	.Player--tokens {
+		width: 40px;
+		gap: .1rem;
+	}
+
+	.Player--tokens__icon {
+		width: 8px;
+	}
+
+	.InfoLandscape--score__score {
+		font-size: 6px;
+	}
+
+	.InfoLandscape--options-btn .Btn {
+		font-size: 10px;
+		width: auto;
+		padding: .5rem 0;
+	}
+
+	.BtnsLandscape--container {
+		padding-left: 20px;
+		padding-right: 5px;
+	}
+
+	.BtnsLandscape--container .Btn {
+		width: 130%;
+		font-size: 10px;
+		padding: 0.5rem .2rem;
+	}
+}

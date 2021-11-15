@@ -1,0 +1,87 @@
+.AdvanceUI-mobile {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(4, 4, 4, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	transition: .3s opacity;
+}
+
+.AdvanceUI-mobile.hidden {
+	opacity: 0;
+}
+
+.AdvanceUI-mobile--container {
+	background-color: #1B2B37;
+	background-image: url(../../img/bgAdvanceUI.png);
+	background-size: cover;
+	width: 290px;
+	height: 377px;
+	max-height: 90%;
+	overflow-y: auto;
+	padding: 1rem;
+	color: #fff;
+}
+
+.AdvanceUI-mobile--close {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 0.5rem;
+}
+
+.AdvanceUI-mobile--close__icon {
+	box-sizing: content-box;
+	width: 1rem;
+}
+
+.AdvanceUI-mobile--header__title {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.AdvanceUI-mobile--options {
+	width: 75%;
+	margin: 0 auto;
+	display: grid;
+	gap: 1rem;
+}
+
+.AdvanceUI-mobile--options .AdvanceUI--config-group {
+	grid-template-columns: 1fr 2fr;
+}
+
+.AdvanceUI-mobile--options .AdvanceUI--config-group>*:nth-child(1) {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.AdvanceUI-mobile--options .AdvanceUI--config-group>span {
+	font-size: 16px;
+}
+
+.Label--switch {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.AdvanceUI-mobile--config>span {
+	margin-top: 2.5rem;
+}
+
+.AdvanceUI-mobile--config__sound-icon-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	width: 80%;
+	margin: 2.5rem auto 0;
+}
+
+.AdvanceUI-mobile--config__sound-icon {
+	width: 1.5rem;
+}

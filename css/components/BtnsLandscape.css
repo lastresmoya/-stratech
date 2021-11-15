@@ -1,0 +1,44 @@
+.BtnsLandscape {
+	display: none;
+}
+
+.BtnsLandscape .Btn {
+	font-size: 12px;
+}
+
+@media screen and (orientation: landscape) {
+	.BtnsLandscape--container .Btn {
+		width: 100px;
+	}
+}
+
+
+@media screen and (orientation: landscape) {
+	.BtnsLandscape {
+		display: grid;
+		padding-right: 1rem;
+		align-items: end;
+	}
+}
+
+@media (orientation: landscape) and (min-width: 824px) {
+	.BtnsLandscape {
+		display: grid;
+	}
+
+	.BtnsLandscape--container {
+		display: none;
+	}
+}
+
+@media (min-width: 1280px) and (orientation: landscape) {
+	.BtnsLandscape {
+		display: none;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.BtnsLandscape {
+		display: none;
+	}
+}

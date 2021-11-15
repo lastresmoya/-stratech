@@ -1,0 +1,120 @@
+.HeaderMobile {
+	--size-container-icon: 32px;
+	padding: 1.5rem 1rem 0;
+	width: 100%;
+}
+
+.HeaderMobile--menu {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.HeaderMobile--container-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ffffff;
+	width: var(--size-container-icon);
+	height: var(--size-container-icon);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background .3s, width .3s;
+	position: relative;
+}
+
+.HeaderMobile--container-icon:hover {
+	background-color: #f5f5f5;
+}
+
+.HeaderMobile__title {
+	background-color: rgba(255, 255, 255, 0.05);
+	padding: .5rem .7rem;
+	border-radius: 10px;
+	font-size: 1.1rem;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 1rem;
+	width: 75%;
+}
+
+.HeaderMobile--score__icon,
+.HeaderMobile--streak__icon {
+	width: 18px;
+	margin-right: 0.5rem;
+}
+
+.HeaderMobile--score,
+.HeaderMobile--streak {
+	width: 50%;
+	display: flex;
+	align-items: center;
+}
+
+.HeaderMobile--score__score,
+.HeaderMobile--streak__streak {
+	font-size: 10px;
+}
+
+.HeaderMobile--score__percenter {
+	width: 100%;
+	text-align: center;
+}
+
+@media screen and (min-width: 375px) {
+
+	.HeaderMobile--score__icon,
+	.HeaderMobile--streak__icon {
+		width: 24px;
+	}
+}
+
+@media screen and (min-width: 1024px),
+screen and (orientation: landscape) {
+	.HeaderMobile {
+		margin-bottom: 1rem;
+	}
+
+	.HeaderMobile__title {
+		display: none;
+	}
+}
+
+@media (max-height: 768px) and (orientation: landscape) {
+	.HeaderMobile {
+		height: 10vh;
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+	.HeaderMobile {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.HeaderMobile {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.HeaderMobile {
+		display: none;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.HeaderMobile__title {
+		display: flex;
+	}
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+	.HeaderMobile__title {
+		display: none;
+	}
+}

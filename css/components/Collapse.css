@@ -1,0 +1,184 @@
+.Collapse--preflop__options {
+	cursor: default;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.Collapse--preflop__option {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	font-weight: 600;
+}
+
+.active {
+	display: block;
+}
+
+.desactive {
+	display: none;
+}
+
+.Collapse--preflop__container,
+.Collapse--preflop__container-options {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem;
+	border-radius: 2px;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+
+.Collapse--preflop__aditional-info {
+	margin-top: 1rem;
+}
+
+.Collapse--preflop__item {
+	display: block;
+	padding: 0.2rem;
+	border-radius: 2px;
+	margin-bottom: 0.5rem;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+
+
+.Collapse--preflop__item>span {
+	font-weight: 700;
+}
+
+.Collapse--preflop__container {
+	display: flex;
+}
+
+.Collapse--preflop__options {
+	cursor: default;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.Collapse--preflop__option {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	font-weight: 600;
+}
+
+.Collapse--preflop__icon-expand,
+.Collapse--preflop__icon-contract {
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
+.Collapse--preflop.good {
+	--bg-color: #1FA334;
+}
+
+.Collapse--preflop.regular {
+	--bg-color: #E5BE30;
+}
+
+.Collapse--preflop.bad {
+	--bg-color: #E55130;
+}
+
+.Collapse--preflop__container {
+	background-color: var(--bg-color);
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem;
+	border-radius: 2px;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+
+
+.Collapse--preflop__item.info {
+	background-color: var(--bg-color);
+}
+
+.Collapse--preflop__aditional-info {
+	max-height: 0;
+	overflow: hidden;
+	transition: .3s max-height;
+	margin-top: 1rem;
+}
+
+.Collapse--preflop__item {
+	display: block;
+	padding: 0.2rem;
+	border-radius: 2px;
+	margin-bottom: 0.5rem;
+	font-size: 14px;
+}
+
+.Collapse--preflop__item:nth-child(1) {
+	display: inline-block;
+}
+
+.Collapse--preflop__text {
+	display: flex;
+	align-items: center;
+}
+
+.Collapse--preflop__item>span {
+	font-weight: 700;
+}
+
+.Collapse--preflop__container {
+	display: flex;
+}
+
+@media (width: 667px) and (height: 375px) {
+	.Collapse--preflop__text {
+		display: flex;
+		align-items: center;
+		font-size: 9px;
+	}
+
+	.Collapse--preflop__container {
+		padding: .3rem;
+	}
+
+	.Collapse--preflop__container-options {
+		padding: .1rem;
+	}
+
+	.Collapse--preflop__item {
+		font-size: 12px;
+	}
+
+
+	.Collapse--preflop__option {
+		gap: 0.2rem;
+	}
+}
+
+@media (orientation: landscape) and (max-width: 665px) {
+	.Collapse--preflop__text {
+		font-size: 10px;
+	}
+
+	.Collapse--preflop__item {
+		font-size: 10px;
+	}
+
+	.Collapse--preflop__options {
+		display: grid;
+		gap: .5rem;
+	}
+
+	.Collapse--preflop__option {
+		font-size: 10px;
+	}
+}

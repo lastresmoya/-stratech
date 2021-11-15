@@ -1,0 +1,145 @@
+.Btns {
+	display: none;
+}
+
+.BtnsOptions {
+	width: calc(100% - 2rem);
+	position: absolute;
+	bottom: 1rem;
+	left: 0;
+}
+
+.BtnsOptions--container {
+	display: grid;
+	gap: 1rem;
+	margin: 0 auto;
+}
+
+.BtnsMobile {
+	display: flex;
+	justify-content: center;
+}
+
+.BtnsMobile--container {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.BtnsMobile--cantity {
+	display: grid;
+	grid-template-columns: repeat(4, 85fr);
+	justify-content: center;
+	margin-bottom: 1rem;
+	gap: 1rem;
+}
+
+.BtnsMobile--check {
+	width: 100%;
+	display: flex;
+	margin-bottom: 1rem;
+}
+
+.BtnsMobile--check .Btn {
+	margin: 0 auto;
+	width: calc(50% - 0.5rem);
+}
+
+.BtnsMobile--options {
+	width: 100%;
+	display: flex;
+	gap: 1rem;
+}
+
+.BtnsMobile--options .Btn {
+	width: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+	.BtnsMobile {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px),
+screen and (orientation: landscape) {
+	.BtnsMobile {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 823px) {
+
+	.BtnsMobile--cantity,
+	.BtnsMobile--check,
+	.hr {
+		margin-bottom: 0.5rem;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.BtnsMobile {
+		display: flex;
+	}
+}
+
+.Btns--landscape {
+	display: none;
+}
+
+.BtnsLandscape--container {
+	display: grid;
+	gap: .5rem;
+}
+
+@media (orientation: landscape) and (min-width: 824px) {
+	.Btns--container {
+		display: none;
+	}
+
+	.Btns {
+		display: block;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.Btns--container {
+		display: grid;
+		gap: 0 1rem;
+		width: 70%;
+		margin: 0 auto;
+		justify-content: center;
+		grid-template-columns: repeat(5, 90px);
+	}
+
+	.Btns--container .Btn {
+		width: 90px;
+	}
+
+	.BtnsLandscape--container {
+		display: none;
+	}
+
+	.Btns--landscape {
+		display: grid;
+		gap: .5rem;
+	}
+
+	.InfoLandscape--options-btn {
+		display: none;
+	}
+
+	.Btns--landscape .Btn {
+		width: 115px;
+	}
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+	.Btns--container {
+		grid-template-columns: repeat(5, 120px);
+	}
+
+	.Btns--container .Btn {
+		width: 120px;
+	}
+}

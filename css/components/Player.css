@@ -1,0 +1,487 @@
+/* Player */
+.Player--container {
+	--bg-principal-player: #154574;
+	--border: #fff;
+	--padding-money: .7rem;
+	position: absolute;
+	z-index: 6;
+	--size: 2.3rem;
+}
+
+.Player--img:hover .Player--evaluation {
+	opacity: 1;
+}
+
+.Player--container {
+	z-index: 999;
+}
+
+.Player--evaluation {
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: opacity .3s;
+}
+
+.Player--evaluation-container {
+	--bg-hero-evaluation: #1FA334;
+	background-color: var(--bg-hero-evaluation);
+	border-radius: 50%;
+	box-sizing: content-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: calc(var(--size) + 0.7rem);
+	height: calc(var(--size) + 0.7rem);
+	font-size: 7.5px;
+	color: #fff;
+	font-weight: 700;
+}
+
+.evaluation__small-error {
+	--bg-hero-evaluation: #E5BE30;
+	color: #000000;
+}
+
+.evaluation__large-error {
+	--bg-hero-evaluation: #E55130;
+}
+
+.evaluation__blunder {
+	--bg-hero-evaluation: #E53030;
+}
+
+.Player--evaluation-container>span:nth-child(1) {
+	font-size: 9.5px;
+}
+
+.Player--container:nth-child(1) {
+	--border: #F8C538;
+}
+
+.Player__disabled {
+	opacity: .6;
+}
+
+.Player--img {
+	border-radius: 50%;
+	background-color: var(--bg-principal-player);
+	padding: 0.35rem;
+	border: 2px solid var(--border);
+	box-sizing: content-box;
+	width: var(--size);
+	height: var(--size);
+}
+
+.Player--container:nth-child(1) .Player--img {
+	position: relative;
+}
+
+.Player--container:nth-child(1) .Player--img__avatar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	background-color: var(--bg-principal-player);
+	background-color: #ffd9c3;
+	padding: 0;
+	width: calc(var(--size) + 0.7rem);
+	height: calc(var(--size) + 0.7rem);
+}
+
+.Player--cards {
+	position: absolute;
+	top: -60%;
+	right: 10%;
+	left: initial;
+	z-index: -2;
+}
+
+.Player--cards>img {
+	width: 25px;
+	box-shadow: -2px -1px 2px 1px rgba(0, 0, 0, 0.33);
+}
+
+.Player--cards>img:nth-child(2) {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+}
+
+.Player--cards>img:nth-child(3) {
+	position: absolute;
+	top: 20%;
+	left: 100%;
+}
+
+.Player--cards>img:nth-child(4) {
+	position: absolute;
+	top: 30%;
+	left: 150%;
+}
+
+.Player--cards>img:nth-child(5) {
+	position: absolute;
+	top: 40%;
+	left: 200%;
+}
+
+.Player--container:nth-child(1) .Player--cards {
+	top: -60%;
+	bottom: 70%;
+}
+
+.Player--lock {
+	--lock-separation: -10%;
+	position: absolute;
+	left: var(--lock-separation);
+	right: initial;
+	bottom: -10%;
+}
+
+.Player--money {
+	width: auto;
+	z-index: -1;
+	position: absolute;
+	left: 80%;
+	top: 12%;
+	background-color: var(--bg-principal-player);
+	padding: 0.2rem;
+	border-radius: 5px;
+	border: 2px solid var(--border);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-left: var(--padding-money);
+	padding-right: 0.3rem;
+}
+
+.Player--money>* {
+	display: block;
+	font-weight: bold;
+}
+
+.Player--money {
+	color: #fff;
+	font-size: 11px;
+}
+
+.Player--money__cantity {
+	color: #EBD50C;
+}
+
+.Player--tokens {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 0.05rem 0.2rem;
+	border-radius: 50px;
+	position: absolute;
+	gap: .3rem;
+	width: 60px;
+}
+
+.Player--tokens__text {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+
+@media screen and (min-width: 1024px),
+screen and (orientation: landscape) {
+	.Player--img {
+		--size: 2.5rem;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.Player--img {
+		--size: 2.3rem;
+	}
+
+	.Player--lock {
+		--lock-separation: 5%;
+	}
+
+	.Player--cards {
+		right: -10%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.Player--money {
+		top: 9%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.Player--img {
+		--size: 2.3rem;
+	}
+
+	.Player--money {
+		top: 15%;
+	}
+
+	.Player--container {
+		--padding-money: .7rem;
+	}
+
+	.Player--lock__icon {
+		width: 1.5rem;
+	}
+}
+
+@media (orientation: portrait) and (min-width: 1024px) {
+	.Player--container {
+		--padding-money: 1.2rem;
+	}
+}
+
+
+
+@media (min-width: 1024px) and (orientation: portrait) {
+	.Player--img {
+		--size: 4rem;
+	}
+
+	.Player--money {
+		top: 20%;
+	}
+
+	.Player--cards {
+		top: -30%;
+	}
+
+	.Player--lock {
+		--lock-separation: 5%;
+		bottom: -15%;
+	}
+
+	.Player--lock__icon {
+		width: 2rem;
+	}
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+	.Player--lock {
+		--lock-separation: 10%;
+	}
+}
+
+@media screen and (max-height: 480px) {
+	.Player--money {
+		top: 22%;
+	}
+}
+
+@media (max-width: 823px) and (max-height: 411px) {
+	.Player--img {
+		--size: 1.8rem;
+	}
+
+	.Player--money {
+		width: 90%;
+	}
+
+	.Player--money>* {
+		font-size: 10px;
+	}
+
+
+	.Player--cards>img {
+		width: 23.5px;
+	}
+}
+
+@media (max-height: 823px) and (max-width: 411px) {
+	.Player--money>* {
+		font-size: 12px;
+	}
+
+	.Player--cards {
+		top: -45%;
+	}
+}
+
+@media (max-height: 667px) and (max-width: 375px) {
+	.Player--money {
+		top: 15%;
+	}
+
+	.Player--money>* {
+		font-size: 8px;
+	}
+}
+
+@media (max-width: 736px) and (max-height: 414px) {
+	.Player--img {
+		--size: 1.8rem;
+	}
+
+	.Player--money {
+		width: 80%;
+		top: 8%;
+	}
+
+	.Player--money>* {
+		font-size: 9px;
+	}
+
+	.Player--cards {
+		top: -40%;
+	}
+
+	.Player--cards>img {
+		width: 18px;
+	}
+}
+
+@media (max-width: 667px) and (max-height: 375px) {
+	.Player--cards {
+		top: -40%;
+	}
+
+	.Player--cards>img {
+		width: 20px;
+	}
+}
+
+@media (max-width: 768px) and (max-height: 1024px) {
+	.Player--tokens__icon {
+		width: 16px;
+	}
+
+	.Player--tokens__text {
+		font-size: 11px;
+	}
+}
+
+@media (max-height: 960px) and (max-width: 600px) {
+	.Player--lock {
+		--lock-separation: 5%;
+	}
+
+	.Player--tokens {
+		width: 54px;
+		gap: .2rem;
+	}
+
+	.Player--tokens__icon {
+		width: 12px;
+	}
+}
+
+@media (max-width: 823px) and (max-height: 414px) {
+	.Player--tokens__icon {
+		width: 14px;
+	}
+
+	.Player--tokens__text {
+		font-size: 9px;
+	}
+}
+
+@media (max-width: 736px) and (max-height: 414px) {
+	.Player--tokens__icon {
+		width: 12px;
+	}
+
+	.Player--tokens__text {
+		font-size: 8px;
+	}
+
+	.Player--tokens {
+		width: 47px;
+	}
+}
+
+@media(max-height: 823px) and (max-width: 414px) {
+	.Player--tokens__icon {
+		width: 12px;
+	}
+
+	.Player--tokens__text {
+		font-size: 9px;
+	}
+
+	.Player--tokens {
+		width: 50px;
+	}
+}
+
+@media (max-height: 736px) and (max-width: 414px) {
+	.Player--tokens__icon {
+		width: 10px;
+	}
+
+	.Player--tokens__text {
+		font-size: 8px;
+	}
+
+	.Player--tokens {
+		width: 46px;
+	}
+}
+
+@media (max-width: 823px) and (max-height: 411px) {
+	.Player--tokens {
+		width: 52px;
+	}
+
+	.Player--money {
+		top: 13%;
+	}
+}
+
+@media (max-width: 736px) and (max-height: 414px) {
+	.Player--money {
+		top: 14%;
+	}
+}
+
+@media (max-width: 667px) and (max-height: 375px) {
+	.Player--tokens {
+		width: 47px;
+	}
+}
+
+@media (max-height: 823px) and (max-width: 411px) {
+	.Player--lock {
+		--lock-separation: 5%;
+	}
+}
+
+@media (max-height: 667px) and (max-width: 375px) {
+	.Player--tokens {
+		gap: .1rem;
+		width: 42px;
+	}
+}
+
+
+
+@media (min-width: 768px) and (min-height: 1024px) and (max-width: 1023px) and (orientation: portrait) {
+	.Player--lock {
+		--lock-separation: 5%;
+	}
+
+	.Player--tokens {
+		width: 52px;
+		gap: .2rem;
+	}
+
+	.Player--tokens__icon {
+		width: 10px;
+	}
+}

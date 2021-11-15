@@ -1,324 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-419">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/styles/index.css">
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Index Modes</title>
 </head>
-<body style="background-size: auto 100%; background-repeat: no-repeat; background-position: left top; background-image: url('./assets/images/poker-bg.svg'); background-size: cover;">
 
-    <header class="titulo container-fluid px-0 d-none d-xl-block d-xxl-none">
-        <!-- As a link -->
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F5F5F5;">
-            <div class="container-fluid d-flex">
-                <div>
-                    <a href=""><img src="./assets/images/Icon.svg" alt=""></a> 
-                    <a class="navbar-brand px-2" href="#">RangeConverter</a>
-                </div>
-                <div class="d-flex justify-content-center align-items-center">
-                    <a class="navbar-brand px-3" href="#">My GTO Live | My Solutions</a>
-                    <a href=""><img src="./assets/images/Icon-logout.svg" alt=""></a> 
-                    <a class="navbar-brand px-2" href="#">Logout</a>
-                </div>
-            </div>
-        </nav>
-
-    </header>
-
-    <div class="d-flex">
-
-        <div class="col-xl-2 py-3 d-none d-xl-block">
-            <div class="Scroll px-3" style="height: 85vh;">
-
-                <div class="main rounded py-3 my-2" id="section1" style="background: rgba(15, 26, 42, 0.6)"> 
-                    <h2 class="text-center" style="color: #F8C538;">Now Playing</h2>
-                    <div class="d-flex flex-column">
-                        <div class="col-12">
-                            <span style="color: #ffffff;">Dealt to hero:</span>
-                            <div class="d-flex py-2">
-                                <img class="img-card" src="./assets/images/card1.svg" alt="">
-                                <img class="img-card" src="./assets/images/card1.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-12 d-flex flex-column py-1">
-                            <span style="color: #ffffff; background: rgba(255, 255, 255, 0.2); font-size: 12px; padding: 4px;" class="text-center preflop rounded">Preflop (1.5)</span>
-                            <span class="rounded my-2 px-2" style="color: white; background-color: #E5BE30; padding: 2px; font-size: 14px;">1- UTG (HERO): 2.5bb 
-                                <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="collapsed ml-2" src="./assets/images/arrow-right.svg" alt=""></a> 
-                                <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="expanded ml-2" src="./assets/images/arrow-down.svg" alt=""></a>                    
-                            </span>                
-
-                            <div class="collapse" id="collapseExample">
-                                <div class="d-flex flex-column">
-                                    <span class="rounded correct mb-2 px-2" style="color: #ffffff; background: #E5BE30; padding: 2px;">Small error - Call: 44.7%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">6.4bb: 1.0%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">10.9bb: 4.3%</span>
-                                    <div class="d-flex py-2">
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/bill.svg" class="pr-2" alt=""></a>Review</span>
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/refresh.svg" class="pr-2" alt=""></a>Repeat</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <span style="color: #ffffff; font-size: 14px;">2- BB: ...</span>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="main rounded py-3 my-2 hands" id="section2" style="background: rgba(15, 26, 42, 0.3)">
-                    <h2 class="text-center" style="color: white;">Hand #4</h2>
-                    <div class="d-flex flex-column">
-                        <div class="col-12">
-                            <span style="color: #ffffff;">Dealt to hero:</span>
-                            <div class="d-flex py-2">
-                                <img class="img-card" src="./assets/images/card1.svg" alt="">
-                                <img class="img-card" src="./assets/images/card1.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-12 d-flex flex-column py-1">
-                            <span style="color: #ffffff; background: rgba(255, 255, 255, 0.2); font-size: 12px; padding: 4px;" class="text-center preflop rounded">Preflop (1.5)</span>
-                            <span class="rounded my-2 px-2" style="color: white; background-color: #E5BE30; padding: 2px; font-size: 14px;">1- UTG (HERO): 2.5bb 
-                                <a data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="collapsed ml-2" src="./assets/images/arrow-right.svg" alt=""></a> 
-                                <a data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="expanded ml-2" src="./assets/images/arrow-down.svg" alt=""></a>                    
-                            </span>                
-
-                            <div class="collapse" id="collapseExample1">
-                                <div class="d-flex flex-column">
-                                    <span class="rounded correct mb-2 px-2" style="color: #ffffff; background: #E5BE30; padding: 2px;">Small error - Call: 44.7%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">6.4bb: 1.0%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">10.9bb: 4.3%</span>
-                                    <div class="d-flex py-2">
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/bill.svg" class="pr-2" alt=""></a>Review</span>
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/refresh.svg" class="pr-2" alt=""></a>Repeat</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="pb-1" style="color: #ffffff; font-size: 14px;">2- BB: 11.0bb</span>
-
-                            <script src="https://code.jquery.com/jquery.js"></script>
-                            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-                            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<body>
+	<h1>Index Modes</h1>
 
 
-                            <span class="rounded my-2 px-2" style="color: white; background-color: #1FA334; padding: 2px; font-size: 14px;">3- UTG (HERO): Call 
-                                <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="collapsed ml-2" src="./assets/images/arrow-right.svg" alt=""></a> 
-                                <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="expanded ml-2" src="./assets/images/arrow-down.svg" alt=""></a>                    
-                            </span>                
+	<h2>Nine Players</h2>
+	<a href="modes/nine-players/two-cards/">Nine Players / Two Cards</a>
 
-                            <div class="collapse" id="collapseExample2">
-                                <div class="d-flex flex-column">
-                                    <span class="rounded correct mb-2 px-2" style="color: #ffffff; background: #1FA334; padding: 2px;">Correct - Call: 94.7%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">6.4bb: 1.0%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">10.9bb: 4.3%</span>
-                                    <div class="d-flex py-2">
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/bill.svg" class="pr-2" alt=""></a>Review</span>
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/refresh.svg" class="pr-2" alt=""></a>Repeat</span>
-                                    </div>
-                                </div>
-                            </div>
+	<h2>Eight Players</h2>
+	<a href="modes/eight-players/two-cards/">Eight Players / Two Cards</a>
 
-                            <span style="color: #ffffff; background: rgba(255, 255, 255, 0.2); font-size: 12px; padding: 4px;" class="text-center preflop rounded">Flop (22.5)</span>
-                            <div class="d-flex py-2" style="gap: 2%;">
-                                <img src="./assets/images/card2.svg" alt="">
-                                <img src="./assets/images/card2.svg" alt="">
-                                <img src="./assets/images/card2.svg" alt="">
-                            </div>
-                            <span style="color: #ffffff; font-size: 14px;">1- BB: 15.1bb</span>
-                            <span class="rounded my-2 px-2" style="color: white; background-color: #E55130; padding: 2px; font-size: 14px;">2- UTG (HERO): Call 
-                                <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="collapsed ml-2" src="./assets/images/arrow-right.svg" alt=""></a> 
-                                <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="expanded ml-2" src="./assets/images/arrow-down.svg" alt=""></a>                    
-                            </span>                
+	<h2>Six Players</h2>
+	<a href="modes/six-players/two-cards/">Six Players / Two Cards</a>
+	<a href="modes/six-players/four-cards/">Six Players / Four Cards</a>
+	<a href="modes/six-players/five-cards/">Six Players / Five Cards</a>
 
-                            <div class="collapse" id="collapseExample3">
-                                <div class="d-flex flex-column">
-                                    <span class="rounded correct mb-2 px-2" style="color: #ffffff; background: #E55130; padding: 2px;">Large error - Call: 14.7%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">6.4bb: 1.0%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">10.9bb: 4.3%</span>
-                                    <div class="d-flex py-2">
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/bill.svg" class="pr-2" alt=""></a>Review</span>
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/refresh.svg" class="pr-2" alt=""></a>Repeat</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <span style="color: #ffffff; background: rgba(255, 255, 255, 0.2); font-size: 12px; padding: 4px;" class="text-center preflop rounded">Turn (52.7)</span>
-                        </div>
-                    </div>
-                </div>
+	<h2>Five Players</h2>
+	<a href="modes/five-players/two-cards/">Five Players / Two Cards</a>
+	<a href="modes/five-players/four-cards/">Five Players / Four Cards</a>
+	<a href="modes/five-players/five-cards/">Five Players / Five Cards</a>
 
-                <div class="main rounded py-3 my-2 hands" id="section2" style="background: rgba(15, 26, 42, 0.3)">
-                    <h2 class="text-center" style="color: white;">Hand #5</h2>
-                    <div class="d-flex flex-column">
-                        <div class="col-12">
-                            <span style="color: #ffffff;">Dealt to hero:</span>
-                            <div class="d-flex py-2">
-                                <img class="img-card" src="./assets/images/card3.svg" alt="">
-                                <img class="img-card" src="./assets/images/card3.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-12 d-flex flex-column py-1">
-                            <span style="color: #ffffff; background: rgba(255, 255, 255, 0.2); font-size: 12px; padding: 4px;" class="text-center preflop rounded">Preflop (1.5)</span>
-                            <span class="rounded my-2 px-2" style="color: white; background-color: #E5BE30; padding: 2px; font-size: 14px;">1- UTG (HERO): 2.5bb 
-                                <a data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="collapsed ml-2" src="./assets/images/arrow-right.svg" alt=""></a> 
-                                <a data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="expanded ml-2" src="./assets/images/arrow-down.svg" alt=""></a>                    
-                            </span>                
+	<h2>Four Players</h2>
+	<a href="modes/four-players/two-cards/">Four Players / Two Cards</a>
+	<a href="modes/four-players/four-cards/">Four Players / Four Cards</a>
+	<a href="modes/four-players/five-cards/">Four Players / Five Cards</a>
 
-                            <div class="collapse" id="collapseExample4">
-                                <div class="d-flex flex-column">
-                                    <span class="rounded correct mb-2 px-2" style="color: #ffffff; background: #E5BE30; padding: 2px;">Small error - Call: 44.7%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">6.4bb: 1.0%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">10.9bb: 4.3%</span>
-                                    <div class="d-flex py-2">
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/bill.svg" class="pr-2" alt=""></a>Review</span>
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/refresh.svg" class="pr-2" alt=""></a>Repeat</span>
-                                    </div>
-                                </div>
-                            </div>
+	<h2>Three Players</h2>
+	<a href="modes/three-players/two-cards/">Three Players / Two Cards</a>
 
-                            <span class="pb-1" style="color: #ffffff; font-size: 14px;">2- BB: 11.0bb</span>
-                            <span class="rounded my-2 px-2" style="color: white; background-color: #1FA334; padding: 2px; font-size: 14px;">3- UTG (HERO): Call 
-                                <a data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="collapsed ml-2" src="./assets/images/arrow-right.svg" alt=""></a> 
-                                <a data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="expanded ml-2" src="./assets/images/arrow-down.svg" alt=""></a>                    
-                            </span>                
-
-                            <div class="collapse" id="collapseExample5">
-                                <div class="d-flex flex-column">
-                                    <span class="rounded correct mb-2 px-2" style="color: #ffffff; background: #1FA334; padding: 2px;">Correct - Call: 94.7%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">6.4bb: 1.0%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">10.9bb: 4.3%</span>
-                                    <div class="d-flex py-2">
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/bill.svg" class="pr-2" alt=""></a>Review</span>
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/refresh.svg" class="pr-2" alt=""></a>Repeat</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <span style="color: #ffffff; background: rgba(255, 255, 255, 0.2); font-size: 12px; padding: 4px;" class="text-center preflop rounded">Flop (22.5)</span>
-                            <div class="d-flex py-2" style="gap: 2%;">
-                                <img src="./assets/images/card2.svg" alt="">
-                                <img src="./assets/images/card2.svg" alt="">
-                                <img src="./assets/images/card2.svg" alt="">
-                            </div>
-                            <span style="color: #ffffff; font-size: 14px;">1- BB: 15.1bb</span>
-                            <span class="rounded my-2 px-2" style="color: white; background-color: #E55130; padding: 2px; font-size: 14px;">2- UTG (HERO): Call 
-                                <a data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="collapsed ml-2" src="./assets/images/arrow-right.svg" alt=""></a> 
-                                <a data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample"><img class="expanded ml-2" src="./assets/images/arrow-down.svg" alt=""></a>                    
-                            </span>                
-
-                            <div class="collapse" id="collapseExample6">
-                                <div class="d-flex flex-column">
-                                    <span class="rounded correct mb-2 px-2" style="color: #ffffff; background: #E55130; padding: 2px;">Large error - Call: 14.7%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">6.4bb: 1.0%</span>
-                                    <span style="color: #ffffff; font-size: 14px;">10.9bb: 4.3%</span>
-                                    <div class="d-flex py-2">
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/bill.svg" class="pr-2" alt=""></a>Review</span>
-                                        <span class="col-6 p-0" style="color: #ffffff; cursor: pointer;"><a href=""><img src="./assets/images/refresh.svg" class="pr-2" alt=""></a>Repeat</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <span style="color: #ffffff; background: rgba(255, 255, 255, 0.2); font-size: 12px; padding: 4px;" class="text-center preflop rounded">Turn (52.7)</span>
-                        </div>
-                    </div>
-                </div>
-    
-            </div>
-        
-        </div>
-        
-        <div class="col-xl-8 poker-table text-center d-flex flex-column justify-content-between pt-xl-3">
-
-            <div class="d-none d-xl-block d-xxl-none bet"> 
-                    <div class="pb-3">
-                        <h3>6 MAX 100bb 500z Pro</h3>
-                    </div>
-                    <div class="d-flex justify-content-center bet2">
-                        <div class="d-flex justify-content-end align-items-center col-6 bet3">
-                            <div>
-                                <img src="./assets/images/cup.svg" alt="">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <span class="text-center">Score: 18.00</span> 
-                                <span class="text-center">(90.00%)</span>                        
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center col-6 bet3">
-                            <div>
-                                <img src="./assets/images/fire.svg" alt="">
-                            </div>
-                            <div class="d-flex flex-column justify-content-center">
-                                <span class="text-center">Current Streak: 0</span> 
-                            </div>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="transformed">
-                <img class="img-fluid img-table" src="./assets/images/table.svg" alt="">
-            </div>
-
-            <div class="bet-buttons mb-0 d-lg-flex justify-content-center">
-                <div class="mr-lg-1">
-                    <button type="button" class="btn btn-primary rounded border-0" style="background-color: #E5BE30;">9.9 BB</button>
-                    <button type="button" class="btn btn-secondary rounded border-0" style="background-color: #E59230;">20.2 BB</button>
-                </div>
-
-                <div class="mr-lg-1">
-                    <button type="button" class="btn btn-primary rounded border-0" style="background-color: #E55130;">30 BB</button>
-                    <button type="button" class="btn btn-secondary rounded border-0" style="background-color: #E53030;">45.2 BB</button>
-                </div>
-
-                <div>
-                    <button type="button" class="btn btn-secondary rounded border-0" style="background-color: #1FA334;">CHECK</button>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="col-xl-2 justify-content-between d-none d-xl-flex flex-column pt-3">
-            <div class="d-flex flex-column align-items-center stadistics">
-                <button type="button" class="btn btn-primary btn-lg rounded"><img style="margin-right: 10%;" src="./assets/images/stadistics.svg" alt="">Stadistics</button> 
-                <button type="button" class="btn btn-secondary btn-lg rounded"><img style="margin-right: 2%;" src="./assets/images/view.svg" alt="">View simulation</button>   
-
-                <div class="menu-toggle py-4 px-3">
-                    <div class="text-center">
-                        <label for="">Advance UI</label>
-                    </div>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customAnimations">
-                        <label class="custom-control-label" for="customAnimations">Animations</label>
-                    </div>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customLock">
-                        <label class="custom-control-label" for="customLock">Lock hand</label>
-                    </div>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customBoard">
-                        <label class="custom-control-label" for="customBoard">Lock board</label>
-                    </div>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customNode">
-                        <label class="custom-control-label" for="customNode">Lock node</label>
-                    </div>
-                    <div>
-                        <img src="./assets/images/icon-sound.svg" alt="">
-                        <label for="">Sound on/off</label>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex flex-column align-items-center stadistics">
-                <button type="button" class="btn btn-primary btn-lg rounded" style="background-color: #4983DA; color: white;">NEW HAND</button> 
-                <button type="button" class="btn btn-secondary btn-lg rounded mb-0" style="background-color: #E34D4D; color: white;">END SESSION</button>   
-            </div>
-        </div>
-
-    </div>
+	<h2>Two Players</h2>
+	<a href="modes/two-players/two-cards/">Two Players / Two Cards</a>
+	<a href="modes/two-players/four-cards/">Two Players / Four Cards</a>
+	<a href="modes/two-players/five-cards/">Two Players / Five Cards</a>
 
 
-    <script src="assets/js/underscore-min.js"></script>
-    <script src="assets/js/juego.js"></script>
+	<style>
+		a {
+			display: block;
+			margin-bottom: 0.5rem;
+			color: #1FA334;
+			text-decoration: none;
+			transition: color .3s;
+		}
+
+		a:hover {
+			color: #4983DA;
+			text-decoration: underline;
+		}
+
+	</style>
 </body>
-</html> 
+
+</html>

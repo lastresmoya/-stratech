@@ -1,0 +1,51 @@
+.DropdownInfo {
+	cursor: default;
+	background-color: #fff;
+	border-radius: 5px;
+	position: absolute;
+	top: calc(100% - 2rem);
+	right: 0;
+	z-index: 1000;
+	color: #475569;
+	font-weight: 500;
+	max-height: 0;
+	overflow: hidden;
+	transition: .5s max-height;
+}
+
+.DropdownInfo__icon {
+	margin-right: 0.5rem;
+	height: 1.3rem;
+	width: 1.3rem;
+}
+
+.DropdownInfo--ul {
+	padding: 1rem 1.2rem;
+	list-style: none;
+	display: grid;
+	grid-gap: 1rem;
+}
+
+.DropdownInfo--ul__li {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 480px) {
+	.DropdownInfo {
+		top: calc(100% + 1rem);
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.DropdownInfo {
+		top: calc(100% + 1rem);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.DropdownInfo {
+		top: calc(100% + 1rem);
+	}
+}

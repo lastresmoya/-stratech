@@ -1,0 +1,98 @@
+@media (orientation: portrait) and (max-height: 736px) {
+	.HeaderMobile {
+		padding: .75rem 1rem 0;
+	}
+
+	.Table {
+		margin-bottom: .5rem;
+	}
+
+	.Table .Table--container {
+		width: 80%;
+	}
+
+	.Player--container {
+		--padding-money: .5rem;
+	}
+
+	.Player--money>* {
+		font-size: 9px;
+	}
+
+	.Player--cards {
+		top: -40%;
+	}
+
+	.Player--cards>img {
+		width: 16px;
+	}
+
+	.Player--img {
+		--size: 1.7rem;
+	}
+
+	.BtnsMobile--cantity,
+	.BtnsMobile--check,
+	.hr {
+		margin-bottom: 0.5rem;
+	}
+
+	.Btn {
+		padding: .65rem 1rem;
+	}
+}
+
+@media (orientation: portrait) and (max-height: 736px) {
+	.Table .Table--container {
+		width: 93%;
+	}
+}
+
+@media (orientation: portrait) and (max-height: 667px) {
+	.Table .Table--container {
+		width: 81%;
+	}
+}
+
+@media (max-width: 823px) and (max-height: 414px) {
+	.Table--info {
+		top: 10%;
+	}
+
+	.Table--info-pot {
+		font-size: 7px;
+	}
+}
+
+@media (max-width: 667px) and (max-height: 375px) and (orientation: landscape) {
+	.Player--img {
+		--size: 1.4rem;
+	}
+
+	.Table .Table--container {
+		width: 100%;
+	}
+
+	.Player--cards {
+		position: absolute;
+		top: -62%;
+		right: 10%;
+		left: initial;
+		z-index: -2;
+	}
+}
+
+@media (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
+	.BtnsLandscape--container {
+		padding-left: 20px;
+	}
+
+	.BtnsLandscape--container .Btn {
+		width: 80px;
+	}
+
+	.InfoLandscape--options-btn .Btn {
+		width: 80px;
+		font-size: 9px;
+	}
+}

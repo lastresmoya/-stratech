@@ -1,0 +1,204 @@
+.HandCard--preflop__cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: .5rem;
+}
+
+
+.HandCard:nth-child(1) {
+	background-color: rgba(15, 26, 42, .6);
+}
+
+.HandCard {
+	background-color: rgba(15, 26, 42, .3);
+	padding: 1.5rem;
+	border-radius: 5px;
+	color: #fff;
+	margin-bottom: 1rem;
+}
+
+.HandCard:nth-child(1) .HandCard__title {
+	color: #F8C538;
+}
+
+.HandCard__title {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.HandCard--content {
+	display: block;
+}
+
+.HandCard--dealt {
+	margin-bottom: 1rem;
+	gap: .5rem;
+	align-items: center;
+	justify-content: flex-end;
+	text-align: center;
+}
+
+
+.HandCard--dealt-cards {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: .5rem;
+}
+
+.HandCard--dealt-cards__img {
+	width: 100%;
+	border-radius: 2px;
+}
+
+.HandCard--info {
+	margin: 0 auto;
+}
+
+.HandCard--dealt {
+	display: block;
+}
+
+.HandCard--dealt__title {
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+	.HandCard--info {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+.HandCard--preflop__container {
+	margin-bottom: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem;
+	border-radius: 2px;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.HandCard--preflop__container.principal {
+	background-color: rgba(255, 255, 255, .2);
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+.HandCard--preflop__aditional-info {
+	margin-top: 1rem;
+}
+
+.HandCard--preflop__item {
+	display: block;
+	padding: 0.2rem;
+	border-radius: 2px;
+	margin-bottom: 0.5rem;
+	font-size: 14px;
+}
+
+.HandCard--preflop__item>span {
+	font-weight: 700;
+}
+
+.HandCard--preflop__container {
+	display: flex;
+}
+
+.HandCard--preflop__cards__card {
+	width: 100%;
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+	.HandCard--preflop__cards {
+		width: 70%;
+	}
+}
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 1023px) {
+	.HandCard--preflop__cards {
+		width: 35%;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.HandCard--info {
+		width: 100%;
+		display: grid;
+		gap: .5rem;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.HandCard--header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+@media (orientation: portrait) and (min-width: 1024px) {
+	.HandCard--dealt-card {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (orientation: landscape) and (min-width: 1025px) {
+	.HandCard--header {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.HandCard--dealt {
+		margin-bottom: 1rem;
+	}
+
+	.HandCard--dealt__title {
+		text-align: center;
+		font-size: 18px;
+	}
+
+	.HandCard--content {
+		display: block;
+	}
+
+	.HandCard--info {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (orientation: landscape) and (max-width: 665px) {
+	.HandCard--preflop__cards {
+		width: 90%;
+		margin-bottom: 0.5rem;
+	}
+
+	.HandCard--preflop__text {
+		font-size: 10px;
+		margin-left: -.5rem;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.HandCard--preflop__cards {
+		width: 55%;
+	}
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+	.HandCard--preflop__cards {
+		width: 35%;
+	}
+}
+
+@media (max-width: 823px) and (orientation: landscape) {
+	.HandCard--dealt {
+		display: flex;
+		width: auto;
+	}
+}

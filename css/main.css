@@ -1,0 +1,28 @@
+@import url("global.css");
+@import url("general.css");
+@import url("_variables.css");
+
+
+
+@import url("components/Btn.css");
+@import url("components/Btns.css");
+@import url("components/BtnsLandscape.css");
+@import url("components/HeaderMobile.css");
+@import url("components/HeaderDesktop.css");
+@import url("components/HandHistory.css");
+@import url("components/HandCard.css");
+@import url("components/Collapse.css");
+@import url("components/TableContainer.css");
+@import url("components/Table.css");
+@import url("components/Player.css");
+@import url("components/OptionsDesktop.css");
+@import url("components/AdvanceUI.css");
+
+@import url("components/DropdownInfo.css");
+
+@import url("components/InfoLandscape.css");
+@import url("components/AdvanceUI-mobile.css");
+@import url("components/StatisticsModal.css");
+
+@import url("phones/iphone6-7-8+.css");
+@import url("phones/iphone5-se.css");

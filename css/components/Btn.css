@@ -1,0 +1,55 @@
+.Btn {
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: .845rem 1rem;
+	text-align: center;
+	background-color: #E5BE30;
+	border: none;
+	outline: none;
+	border-radius: 2px;
+	font-weight: 700;
+	font-size: 14px;
+	color: #fff;
+	width: 120px;
+	margin: 0 auto;
+	max-height: 120px;
+}
+
+@media screen and (orientation: landscape) {
+	.Btn {
+		padding: .845rem 0;
+	}
+}
+
+.Btn.small {
+	width: 90px;
+}
+
+.Btn.free {
+	width: 100%;
+}
+
+.Btn.orange {
+	background-color: #E59230;
+}
+
+.Btn.darkOrange {
+	background-color: #E55130;
+}
+
+.Btn.red {
+	background-color: #E53030;
+}
+
+.Btn.green {
+	background-color: #1FA334;
+}
+
+.Btn.redL {
+	background-color: #E34D4D;
+	font-size: 12px;
+}
+
+.Btn.blueL {
+	background-color: #4983DA;
+}

@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>RangeConverter</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+
+	<link rel='icon' type='image/png' href='/favicon.ico'>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="../config-four-players.css">
+	<link rel="stylesheet" href="config-cards.css">
+</head>
+
+<body id="four-cards">
+	<header class="HeaderMobile">
+		<div class="HeaderMobile--menu">
+			<div class="HeaderMobile--container-icon toggleHandHistory">
+				<img class="HeaderMobile--container-icon__icon" src="/img/icons/handHistory.svg" alt="Icon">
+			</div>
+			<div class="HeaderMobile__title">
+				<div class="HeaderMobile--score">
+					<img src="/img/score.svg" alt="Score Icon" class="HeaderMobile--score__icon">
+					<span class="HeaderMobile--score__score">
+						Score: 18.00
+						<span class="HeaderMobile--score__percenter">
+							(90.00%)
+						</span>
+					</span>
+				</div>
+				<div class="HeaderMobile--streak">
+					<img src="/img/streak.svg" alt="Streak Icon" class="HeaderMobile--streak__icon">
+					<span class="HeaderMobile--streak__streak">
+						Current Streak: 0
+					</span>
+				</div>
+			</div>
+			<div class="HeaderMobile--container-icon">
+				<img class="HeaderMobile--container-icon__icon" src="/img/icons/bar.svg" alt="Bar Icon">
+			</div>
+			<div class="DropdownInfo">
+				<ul class="DropdownInfo--ul">
+					<li class="DropdownInfo--ul__li" id="handleAdvanceUIMobile">
+						<img class="DropdownInfo__icon" src="/img/icons/advanceUI.svg" alt="Icon">
+						<span class="DropdownInfo__text">Advance UI</span>
+					</li>
+					<li class="DropdownInfo--ul__li">
+						<!-- View Simluation Icon but with diferent stroke -->
+						<svg class="DropdownInfo__icon" viewBox="0 0 18 17" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.66667 8.83331V7.99998M9 8.83331V6.33331M12.3333 8.83331V4.66665M5.66667 15.5L9 12.1666L12.3333 15.5M1.5 1.33331H16.5M2.33333 1.33331H15.6667V11.3333C15.6667 11.7936 15.2936 12.1666 14.8333 12.1666H3.16667C2.70643 12.1666 2.33333 11.7936 2.33333 11.3333V1.33331Z"
+								stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+
+						<span class="DropdownInfo__text">View Simulation</span>
+					</li>
+					<li class="DropdownInfo--ul__li handleStatisticsModal">
+						<!-- Statistics Icon but with diferent stroke -->
+						<svg class="DropdownInfo__icon" viewBox="0 0 18 18" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M6.5 14.8333V9.83333C6.5 8.91286 5.75381 8.16667 4.83333 8.16667H3.16667C2.24619 8.16667 1.5 8.91286 1.5 9.83333V14.8333C1.5 15.7538 2.24619 16.5 3.16667 16.5H4.83333C5.75381 16.5 6.5 15.7538 6.5 14.8333ZM6.5 14.8333V6.5C6.5 5.57953 7.24619 4.83333 8.16667 4.83333H9.83333C10.7538 4.83333 11.5 5.57953 11.5 6.5V14.8333M6.5 14.8333C6.5 15.7538 7.24619 16.5 8.16667 16.5H9.83333C10.7538 16.5 11.5 15.7538 11.5 14.8333M11.5 14.8333V3.16667C11.5 2.24619 12.2462 1.5 13.1667 1.5H14.8333C15.7538 1.5 16.5 2.24619 16.5 3.16667V14.8333C16.5 15.7538 15.7538 16.5 14.8333 16.5H13.1667C12.2462 16.5 11.5 15.7538 11.5 14.8333Z"
+								stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span class="DropdownInfo__text">Statistics</span>
+					</li>
+					<li class="DropdownInfo--ul__li">
+						<!-- Create Drill Icon but with diferent stroke -->
+						<svg class="DropdownInfo__icon" width="20" height="21" viewBox="0 0 20 21" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M9.81383 12.9021C11.1689 12.9021 12.2673 11.8036 12.2673 10.4486C12.2673 9.09358 11.1689 7.99512 9.81383 7.99512C8.45881 7.99512 7.36035 9.09358 7.36035 10.4486C7.36035 11.8036 8.45881 12.9021 9.81383 12.9021Z"
+								stroke="#475569" stroke-width="1.22674" stroke-miterlimit="10" stroke-linecap="round"
+								stroke-linejoin="round" />
+							<path
+								d="M1.63574 11.1683V9.72895C1.63574 8.87841 2.3309 8.17508 3.18961 8.17508C4.66988 8.17508 5.27507 7.12826 4.53085 5.84427C4.10558 5.10823 4.35911 4.15137 5.10333 3.7261L6.51817 2.91645C7.16425 2.53207 7.99844 2.76106 8.38282 3.40715L8.47278 3.56253C9.20882 4.84652 10.4192 4.84652 11.1634 3.56253L11.2534 3.40715C11.6378 2.76106 12.472 2.53207 13.118 2.91645L14.5329 3.7261C15.2771 4.15137 15.5306 5.10823 15.1054 5.84427C14.3611 7.12826 14.9663 8.17508 16.4466 8.17508C17.2971 8.17508 18.0005 8.87023 18.0005 9.72895V11.1683C18.0005 12.0189 17.3053 12.7222 16.4466 12.7222C14.9663 12.7222 14.3611 13.769 15.1054 15.053C15.5306 15.7972 15.2771 16.7459 14.5329 17.1712L13.118 17.9808C12.472 18.3652 11.6378 18.1362 11.2534 17.4901L11.1634 17.3347C10.4274 16.0508 9.217 16.0508 8.47278 17.3347L8.38282 17.4901C7.99844 18.1362 7.16425 18.3652 6.51817 17.9808L5.10333 17.1712C4.35911 16.7459 4.10558 15.789 4.53085 15.053C5.27507 13.769 4.66988 12.7222 3.18961 12.7222C2.3309 12.7222 1.63574 12.0189 1.63574 11.1683Z"
+								stroke="#475569" stroke-width="1.22674" stroke-miterlimit="10" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+
+						<span class="DropdownInfo__text">Create Drill</span>
+					</li>
+					<li class="DropdownInfo--ul__li">
+						<!-- Starting gansa filter Icon but with diferent stroke -->
+						<svg class="DropdownInfo__icon" width="20" height="19" viewBox="0 0 20 19" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M14.5938 5.26088V13.2572C14.5938 15.6562 13.461 17.2554 10.8178 17.2554H4.77606C2.13282 17.2554 1 15.6562 1 13.2572V5.26088C1 2.86197 2.13282 1.2627 4.77606 1.2627H10.8178C13.461 1.2627 14.5938 2.86197 14.5938 5.26088Z"
+								stroke="#475569" stroke-width="1.18957" stroke-miterlimit="10" stroke-linecap="round"
+								stroke-linejoin="round" />
+							<path
+								d="M18.9132 6.86092L17.8631 14.788C17.5481 17.1662 16.3097 18.6154 13.9103 18.2975L8.42592 17.571C6.0265 17.2532 5.2082 15.5315 5.52323 13.1534L6.57334 5.22625C6.88837 2.84812 8.12671 1.39892 10.5261 1.71677L16.0105 2.44329C18.4099 2.76114 19.2282 4.48279 18.9132 6.86092Z"
+								fill="white" stroke="#475569" stroke-width="1.18957" stroke-miterlimit="10"
+								stroke-linecap="round" stroke-linejoin="round" />
+							<path
+								d="M8.79811 5.7903C8.75639 4.92644 9.32043 4.02624 10.2193 3.97736C10.6968 3.95629 11.2065 4.21699 11.3939 4.72252C11.7976 4.35884 12.3884 4.40954 12.7837 4.66447C13.5454 5.15832 13.5761 6.21788 13.1158 6.94721C12.3845 8.10066 10.826 8.38671 10.4398 8.28323C10.0634 8.17409 8.86806 7.16671 8.79811 5.7903Z"
+								stroke="#475569" stroke-width="1.18957" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+						<span class="DropdownInfo__text">Starting gansa filter</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<header class="HeaderDesktop">
+		<div class="HeaderDesktop--range">
+			<img src="/img/desktop/rangeConverter.svg" alt="Range Converter Icon" class="HeaderDesktop--range__icon">
+			<span class="HeaderDesktop--range__text">
+				RangeConverter
+			</span>
+		</div>
+		<div class="HeaderDesktop--user">
+			<div class="HeaderDesktop--links">
+				<a href="#" class="HeaderDesktop--links__link">My GTO Live</a> | <a href="#"
+					class="HeaderDesktop--links__link">My solutions</a>
+			</div>
+			<div class="HeaderDesktop--log-out">
+				<img src="/img/logOut.svg" alt="Log Out Icon" class="HeaderDesktop--log-out__icon">
+				<a href="#" class="HeaderDesktop--log-out__link">Log Out</a>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div id="HandHistory" class="HandHistory">
+			<div class="HandHistory--close-container">
+				<h2 class="HandHistory__title">
+					Hand History
+				</h2>
+				<h2 class="HandHistory__title HHNameGame">
+					Pokermaster 10/20/40 No Ante 8000 Stack
+				</h2>
+				<div class="HandHistory--close toggleHandHistory">
+					<img src="/img/icons/close.svg" alt="Close Icon" class="HandHistory--close__icon">
+				</div>
+			</div>
+			<div class="HandHistory--card">
+				<div class="HandCard">
+					<div class="HandCard--header">
+						<h3 class="HandCard__title">
+							Now Playing
+						</h3>
+						<div class="HandCard--dealt">
+							<div class="HandCard--dealt__title">
+								Dealt to hero:
+							</div>
+							<div class="HandCard--dealt-cards">
+								<img src="/img/cards/cardDesktop.svg" alt="Card" class="HandCard--dealt-cards__img">
+								<img src="/img/cards/cardDesktop.svg" alt="Card" class="HandCard--dealt-cards__img">
+								<img src="/img/cards/cardDesktop.svg" alt="Card" class="HandCard--dealt-cards__img">
+								<img src="/img/cards/cardDesktop.svg" alt="Card" class="HandCard--dealt-cards__img">
+							</div>
+						</div>
+					</div>
+					<div class="HandCard--content">
+						<div class="HandCard--info">
+							<div class="HandCard--preflop">
+								<div class="HandCard--preflop__container principal">
+									<div class="HandCard--preflop__text">
+										Preflop (1.5)
+									</div>
+								</div>
+								<div class="Collapse--preflop good">
+									<div class="Collapse--preflop__container collapse">
+										<div class="Collapse--preflop__text">
+											1- UTG (HERO): 2.5bb
+										</div>
+										<img src="/img/icons/expandArrow.svg" alt=""
+											class="Collapse--preflop__icon-expand active">
+										<img src="/img/icons/contractArrow.svg" alt=""
+											class="Collapse--preflop__icon-contract">
+									</div>
+									<div class="Collapse--preflop__aditional-info">
+										<div class="Collapse--preflop__item info">
+											Correct - Call: 94.7%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>6.4bb: </span>1.0%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>10.9bb: </span>4.3%
+										</div>
+										<div class="Collapse--preflop">
+											<div class="Collapse--preflop__container-options">
+												<div class="Collapse--preflop__options">
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/review.svg">
+														Review
+													</div>
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/repeat.svg">
+														Repeat
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="HandCard--preflop">
+								<div class="HandCard--preflop__container principal">
+									<div class="HandCard--preflop__text">
+										Flop (22.5)
+									</div>
+								</div>
+								<div class="Collapse--preflop regular">
+									<div class="Collapse--preflop__container collapse">
+										<div class="Collapse--preflop__text">
+											1- UTG (HERO): 2.5bb
+										</div>
+										<img src="/img/icons/expandArrow.svg" alt=""
+											class="Collapse--preflop__icon-expand active">
+										<img src="/img/icons/contractArrow.svg" alt=""
+											class="Collapse--preflop__icon-contract">
+									</div>
+									<div class="Collapse--preflop__aditional-info">
+										<div class="Collapse--preflop__item info">
+											Correct - Call: 94.7%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>6.4bb: </span>1.0%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>10.9bb: </span>4.3%
+										</div>
+										<div class="Collapse--preflop">
+											<div class="Collapse--preflop__container-options">
+												<div class="Collapse--preflop__options">
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/review.svg">
+														Review
+													</div>
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/repeat.svg">
+														Repeat
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="HandCard--preflop__cards">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+								</div>
+								<div class="HandCard--preflop__container">
+									<div class="HandCard--preflop__text">
+										1- BB: 15.1bb
+									</div>
+								</div>
+							</div>
+							<div class="HandCard--preflop">
+								<div class="HandCard--preflop__container principal">
+									<div class="HandCard--preflop__text">
+										Turn (52.7)
+									</div>
+								</div>
+								<div class="Collapse--preflop bad">
+									<div class="Collapse--preflop__container collapse">
+										<div class="Collapse--preflop__text">
+											1- UTG (HERO): 2.5bb
+										</div>
+										<img src="/img/icons/expandArrow.svg" alt=""
+											class="Collapse--preflop__icon-expand active">
+										<img src="/img/icons/contractArrow.svg" alt=""
+											class="Collapse--preflop__icon-contract">
+									</div>
+									<div class="Collapse--preflop__aditional-info">
+										<div class="Collapse--preflop__item info">
+											Correct - Call: 94.7%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>6.4bb: </span>1.0%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>10.9bb: </span>4.3%
+										</div>
+										<div class="Collapse--preflop">
+											<div class="Collapse--preflop__container-options">
+												<div class="Collapse--preflop__options">
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/review.svg">
+														Review
+													</div>
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/repeat.svg">
+														Repeat
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="HandCard--preflop__cards">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+								</div>
+								<div class="HandCard--preflop__container">
+									<div class="HandCard--preflop__text">
+										1- BB: 15.1bb
+									</div>
+								</div>
+							</div>
+							<div class="HandCard--preflop">
+								<div class="HandCard--preflop__container principal">
+									<div class="HandCard--preflop__text">
+										River
+									</div>
+								</div>
+								<div class="Collapse--preflop regular">
+									<div class="Collapse--preflop__container collapse">
+										<div class="Collapse--preflop__text">
+											1- UTG (HERO): 2.5bb
+										</div>
+										<img src="/img/icons/expandArrow.svg" alt=""
+											class="Collapse--preflop__icon-expand active">
+										<img src="/img/icons/contractArrow.svg" alt=""
+											class="Collapse--preflop__icon-contract">
+									</div>
+									<div class="Collapse--preflop__aditional-info">
+										<div class="Collapse--preflop__item info">
+											Correct - Call: 94.7%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>6.4bb: </span>1.0%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>10.9bb: </span>4.3%
+										</div>
+										<div class="Collapse--preflop">
+											<div class="Collapse--preflop__container-options">
+												<div class="Collapse--preflop__options">
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/review.svg">
+														Review
+													</div>
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/repeat.svg">
+														Repeat
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="HandCard--preflop__cards">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+								</div>
+								<div class="HandCard--preflop__container">
+									<div class="HandCard--preflop__text">
+										1- BB: 15.1bb
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="HandCard">
+					<div class="HandCard--header">
+						<h3 class="HandCard__title">
+							Hand #1
+						</h3>
+						<div class="HandCard--dealt">
+							<div class="HandCard--dealt__title">
+								Dealt to hero:
+							</div>
+							<div class="HandCard--dealt-cards">
+								<img src="/img/cards/cardDesktop.svg" alt="Card" class="HandCard--dealt-cards__img">
+								<img src="/img/cards/cardDesktop.svg" alt="Card" class="HandCard--dealt-cards__img">
+							</div>
+						</div>
+					</div>
+					<div class="HandCard--content">
+						<div class="HandCard--info">
+							<div class="HandCard--preflop">
+								<div class="HandCard--preflop__container principal">
+									<div class="HandCard--preflop__text">
+										Preflop (1.5)
+									</div>
+								</div>
+								<div class="Collapse--preflop good">
+									<div class="Collapse--preflop__container collapse">
+										<div class="Collapse--preflop__text">
+											1- UTG (HERO): 2.5bb
+										</div>
+										<img src="/img/icons/expandArrow.svg" alt=""
+											class="Collapse--preflop__icon-expand active">
+										<img src="/img/icons/contractArrow.svg" alt=""
+											class="Collapse--preflop__icon-contract">
+									</div>
+									<div class="Collapse--preflop__aditional-info">
+										<div class="Collapse--preflop__item info">
+											Correct - Call: 94.7%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>6.4bb: </span>1.0%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>10.9bb: </span>4.3%
+										</div>
+										<div class="Collapse--preflop">
+											<div class="Collapse--preflop__container-options">
+												<div class="Collapse--preflop__options">
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/review.svg">
+														Review
+													</div>
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/repeat.svg">
+														Repeat
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="HandCard--preflop">
+								<div class="HandCard--preflop__container principal">
+									<div class="HandCard--preflop__text">
+										Flop (22.5)
+									</div>
+								</div>
+								<div class="Collapse--preflop regular">
+									<div class="Collapse--preflop__container collapse">
+										<div class="Collapse--preflop__text">
+											1- UTG (HERO): 2.5bb
+										</div>
+										<img src="/img/icons/expandArrow.svg" alt=""
+											class="Collapse--preflop__icon-expand active">
+										<img src="/img/icons/contractArrow.svg" alt=""
+											class="Collapse--preflop__icon-contract">
+									</div>
+									<div class="Collapse--preflop__aditional-info">
+										<div class="Collapse--preflop__item info">
+											Correct - Call: 94.7%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>6.4bb: </span>1.0%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>10.9bb: </span>4.3%
+										</div>
+										<div class="Collapse--preflop">
+											<div class="Collapse--preflop__container-options">
+												<div class="Collapse--preflop__options">
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/review.svg">
+														Review
+													</div>
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/repeat.svg">
+														Repeat
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="HandCard--preflop__cards">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+								</div>
+								<div class="HandCard--preflop__container">
+									<div class="HandCard--preflop__text">
+										1- BB: 15.1bb
+									</div>
+								</div>
+							</div>
+							<div class="HandCard--preflop">
+								<div class="HandCard--preflop__container principal">
+									<div class="HandCard--preflop__text">
+										Turn (52.7)
+									</div>
+								</div>
+								<div class="Collapse--preflop bad">
+									<div class="Collapse--preflop__container collapse">
+										<div class="Collapse--preflop__text">
+											1- UTG (HERO): 2.5bb
+										</div>
+										<img src="/img/icons/expandArrow.svg" alt=""
+											class="Collapse--preflop__icon-expand active">
+										<img src="/img/icons/contractArrow.svg" alt=""
+											class="Collapse--preflop__icon-contract">
+									</div>
+									<div class="Collapse--preflop__aditional-info">
+										<div class="Collapse--preflop__item info">
+											Correct - Call: 94.7%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>6.4bb: </span>1.0%
+										</div>
+										<div class="Collapse--preflop__item">
+											<span>10.9bb: </span>4.3%
+										</div>
+										<div class="Collapse--preflop">
+											<div class="Collapse--preflop__container-options">
+												<div class="Collapse--preflop__options">
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/review.svg">
+														Review
+													</div>
+													<div class="Collapse--preflop__option">
+														<img class="Collapse--preflop__img" src="/img/repeat.svg">
+														Repeat
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="HandCard--preflop__cards">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+									<img class="HandCard--preflop__cards__card" src="/img/cards/card.png" alt="">
+								</div>
+								<div class="HandCard--preflop__container">
+									<div class="HandCard--preflop__text">
+										1- BB: 15.1bb
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="InfoLandscape">
+			<div class="InfoLandscape--title">
+				<div class="InfoLandscape--score">
+					<img src="/img/score.svg" alt="Score Icon" class="InfoLandscape--score__icon">
+					<span class="InfoLandscape--score__score">
+						Score: 18.00
+						<span class="InfoLandscape--score__percenter">
+							(90.00%)
+						</span>
+					</span>
+				</div>
+				<div class="InfoLandscape--streak">
+					<img src="/img/streak.svg" alt="Streak Icon" class="InfoLandscape--streak__icon">
+					<span class="InfoLandscape--streak__streak">
+						Current Streak: 0
+					</span>
+				</div>
+			</div>
+			<div class="InfoLandscape--options-btn">
+				<button class="Btn blueL">
+					New Hand
+				</button>
+				<button class="Btn redL">
+					End Session
+				</button>
+			</div>
+		</div>
+		<div class="TableContainer">
+			<div class="TableContainer--header">
+				<div class="TableContainer--title">
+					<h2 class="TableContainer--title__text" id="titleDesktopScore">
+						Pokermaster 10/20/40 No Ante 8000 Stack
+					</h2>
+				</div>
+				<div class="TableContainer--info">
+					<div class="TableContainer--score">
+						<img src="/img/score.svg" alt="Score Icon" class="TableContainer--score__icon">
+						<span class="TableContainer--score__score">
+							Score: 18.00
+							<span class="TableContainer--score__percenter">
+								(90.00%)
+							</span>
+						</span>
+					</div>
+					<div class="TableContainer--streak">
+						<img src="/img/streak.svg" alt="Streak Icon" class="TableContainer--streak__icon">
+						<span class="TableContainer--streak__streak">
+							Current Streak: 0
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="Table">
+				<div class="Table--container">
+					<div class="Table--container-container">
+						<picture class="Table--img-container">
+							<img src="/img/desktop/table.png" alt="Table" class="Table__img landscape">
+							<img src="/img/mobile/table.png" alt="Table" class="Table__img portrait">
+						</picture>
+						<div class="Table--info">
+							<div class="Table--info-container">
+								<div class="Table--info-pot">
+									<h4 class="Table--info__title">
+										TOTAL POT
+									</h4>
+									<span class="Table--info__bb">
+										30.1bb
+									</span>
+								</div>
+							</div>
+							<img src="/img/pocket.png" alt="SVG" class="Table--info__pocket">
+						</div>
+						<div class="Table--cards">
+							<div class="Table--cards-container">
+								<div class="Table--card-container">
+									<div class="Table--card">
+										<img id="cardGuide" src="/img/cards/tableTest.png" class="Table--card__card">
+									</div>
+								</div>
+								<div class="Table--card-container">
+									<div class="Table--card">
+										<img src="/img/cards/tableTest.png" class="Table--card__card">
+									</div>
+								</div>
+								<div class="Table--card-container">
+									<div class="Table--card">
+
+									</div>
+								</div>
+								<div class="Table--card-container">
+									<div class="Table--card">
+
+									</div>
+								</div>
+								<div class="Table--card-container">
+									<div class="Table--card">
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Table--player">
+							<div class="Player--container order-one">
+								<div class="Player--img">
+									<img src="/img/avatar.png" alt="" class="Player--img__avatar">
+									<div class="Player--evaluation">
+										<div class="Player--evaluation-container evaluation__large-error">
+											<span>-2</span>
+											<span>Large Error</span>
+										</div>
+									</div>
+								</div>
+								<div class="Player--cards">
+									<img src="/img/cards/card.png" class="cardsPlayerActive">
+									<img src="/img/cards/card.png" class="cardsPlayerActive">
+									<img src="/img/cards/card.png" class="cardsPlayerActive">
+									<img src="/img/cards/card.png" class="cardsPlayerActive">
+								</div>
+								<div class="Player--lock">
+									<img src="/img/lockOpen.svg" alt="Lock Icon" class="Player--lock__icon">
+								</div>
+								<div class="Player--money">
+									<span class="Player--money__title">UTG</span>
+									<span class="Player--money__cantity">$99</span>
+								</div>
+								<div class="Player--tokens">
+									<img class="Player--tokens__icon" src="/img/tokenPlayer.png" alt="Tokens Img">
+									<span class="Player--tokens__text">1.0 bb</span>
+								</div>
+							</div>
+							<div class="Player--container order-two">
+								<img src="/img/avatarDefault.svg" alt="" class="Player--img">
+								<div class="Player--cards">
+									<img src="/img/cards/default.png">
+									<img src="/img/cards/default.png">
+									<img src="/img/cards/default.png">
+									<img src="/img/cards/default.png">
+								</div>
+								<div class="Player--lock">
+									<img src="/img/lockOpen.svg" alt="Lock Icon" class="Player--lock__icon">
+								</div>
+								<div class="Player--money">
+									<span class="Player--money__title">UTG</span>
+									<span class="Player--money__cantity">$99</span>
+								</div>
+								<div class="Player--tokens">
+									<img class="Player--tokens__icon" src="/img/tokenPlayer.png" alt="Tokens Img">
+									<span class="Player--tokens__text">1.0 bb</span>
+								</div>
+							</div>
+							<div class="Player--container order-three">
+								<img src="/img/avatarDefault.svg" alt="" class="Player--img">
+								<div class="Player--cards">
+									<img src="/img/cards/default.png">
+									<img src="/img/cards/default.png">
+									<img src="/img/cards/default.png">
+									<img src="/img/cards/default.png">
+								</div>
+								<div class="Player--lock">
+									<img src="/img/lockOpen.svg" alt="Lock Icon" class="Player--lock__icon">
+								</div>
+								<div class="Player--money">
+									<span class="Player--money__title">UTG</span>
+									<span class="Player--money__cantity">$99</span>
+								</div>
+								<div class="Player--tokens">
+									<img class="Player--tokens__icon" src="/img/tokenPlayer.png" alt="Tokens Img">
+									<span class="Player--tokens__text">1.0 bb</span>
+								</div>
+							</div>
+							<div class="Player--container order-four Player__disabled">
+								<img src="/img/avatarDisabled.svg" alt="" class="Player--img">
+								<div class="Player--lock">
+									<img src="/img/lockOpen.svg" alt="Lock Icon" class="Player--lock__icon">
+								</div>
+								<div class="Player--money">
+									<span class="Player--money__title">UTG</span>
+									<span class="Player--money__cantity">$99</span>
+								</div>
+								<div class="Player--tokens">
+									<img class="Player--tokens__icon" src="/img/tokenPlayer.png" alt="Tokens Img">
+									<span class="Player--tokens__text">1.0 bb</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Btns">
+				<div class="Btns--container">
+					<button class="Btn">
+						9.9 BB
+					</button>
+					<button class="Btn orange">
+						9.9 BB
+					</button>
+					<button class="Btn darkOrange">
+						9.9 BB
+					</button>
+					<button class="Btn red">
+						9.9 BB
+					</button>
+					<button class="Btn green">
+						CHECK
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="BtnsMobile">
+			<div class="BtnsMobile--container">
+				<div class="BtnsMobile--cantity">
+					<button class="Btn free">
+						9.9 BB
+					</button>
+					<button class="Btn free orange">
+						9.9 BB
+					</button>
+					<button class="Btn free darkOrange">
+						9.9 BB
+					</button>
+					<button class="Btn free red">
+						9.9 BB
+					</button>
+				</div>
+				<div class="BtnsMobile--check">
+					<button class="Btn green">
+						CHECK
+					</button>
+				</div>
+				<div class="hr"></div>
+				<div class="BtnsMobile--options">
+					<button class="Btn blueL">
+						New Hand
+					</button>
+					<button class="Btn redL">
+						End Session
+					</button>
+				</div>
+			</div>
+
+		</div>
+		<div class="BtnsLandscape">
+			<div class="BtnsLandscape--container">
+				<button class="Btn">
+					9.9 BB
+				</button>
+				<button class="Btn orange">
+					9.9 BB
+				</button>
+				<button class="Btn darkOrange">
+					9.9 BB
+				</button>
+				<button class="Btn red">
+					9.9 BB
+				</button>
+				<button class="Btn green">
+					CHECK
+				</button>
+			</div>
+			<div class="Btns--landscape">
+				<button class="Btn blueL">
+					New Hand
+				</button>
+				<button class="Btn redL">
+					End Session
+				</button>
+			</div>
+		</div>
+		<div class="OptionsDesktop">
+			<div class="OptionsDesktop--container">
+				<div class="OptionsDesktop--option-container">
+					<div class="AdvanceUI">
+						<div class="AdvanceUI--header" id="AdvanceUI--toggle">
+							<h3 class="AdvanceUI--header__title">
+								Advance UI
+							</h3>
+							<img id="AdvanceUI--expand" src="/img/icons/expand.svg" alt=""
+								class="AdvanceUI--header__toggle active">
+							<img id="AdvanceUI--contract" src="/img/icons/contract.svg" alt=""
+								class="AdvanceUI--header__toggle">
+						</div>
+						<div id="AdvanceUI--config" class="AdvanceUI--config">
+							<div class="AdvanceUI--config-group handleStatisticsModal">
+								<img src="/img/icons/statistics.svg" alt="Statistics Icon">
+								<span>Statistics</span>
+							</div>
+							<div class="AdvanceUI--config-group">
+								<img src="/img/icons/viewSimulation.svg" alt="View Simulation Icon">
+								<span>View simulation</span>
+							</div>
+							<div class="AdvanceUI--config-group">
+								<img src="/img/icons/setting.svg" alt="Drill Icon" class="">
+								<span>Create drill</span>
+							</div>
+							<div class="AdvanceUI--config-group">
+								<img src="/img/icons/filter.svg" alt="Filter Icon" class="">
+								<span>Starting hands filter</span>
+							</div>
+							<div class="AdvanceUI--config-group">
+								<input type="checkbox" name="switch" id="switch">
+								<label for="switch" class="switch"></label><label for="switch">Animations</label>
+								<input type="checkbox" name="switch1" id="switch1">
+								<label for="switch1" class="switch"></label><label for="switch1">Lock hand</label>
+								<input type="checkbox" name="switch2" id="switch2">
+								<label for="switch2" class="switch"></label><label for="switch2">Lock board</label>
+								<input type="checkbox" name="switch2" id="switch3">
+								<label for="switch3" class="switch"></label><label for="switch3">Lock node</label>
+								<div class="AdvanceUI--config__sound-icon-container">
+									<img src="/img/icons/sound.svg" alt="Sound Icon"
+										class="AdvanceUI--config__sound-icon">
+								</div>
+								<span>Sound on/off</span>
+							</div>
+						</div>
+					</div>
+					<div class="BtnsOptions">
+						<div class="BtnsOptions--container">
+							<button class="Btn blueL">
+								New Hand
+							</button>
+							<button class="Btn redL">
+								End Session
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="AdvanceUI-mobile hidden" id="AdvanceUI-mobile">
+		<div class="AdvanceUI-mobile--container">
+			<div class="AdvanceUI-mobile--close">
+				<svg class="AdvanceUI-mobile--close__icon" id="closeIconAdvanceUIMobile" viewBox="0 0 24 24" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M24 2.41714L21.5829 0L12 9.58286L2.41714 0L0 2.41714L9.58286 12L0 21.5829L2.41714 24L12 14.4171L21.5829 24L24 21.5829L14.4171 12L24 2.41714Z"
+						fill="#fff" />
+				</svg>
+			</div>
+			<h3 class="AdvanceUI-mobile--header__title">
+				Advance UI
+			</h3>
+			<div class="AdvanceUI-mobile--config">
+				<div class="AdvanceUI-mobile--options">
+
+					<div class="AdvanceUI--config-group">
+						<div class="Label--switch">
+							<input type="checkbox" name="switch" id="mSwitch">
+							<label for="mSwitch" class="switch"></label>
+						</div>
+						<label for="mSwitch">Animations</label>
+					</div>
+					<div class="AdvanceUI--config-group">
+						<div class="Label--switch">
+							<input type="checkbox" name="switch1" id="mSwitch1">
+							<label for="mSwitch1" class="switch"></label>
+						</div>
+						<label for="mSwitch1">Lock hand</label>
+					</div>
+					<div class="AdvanceUI--config-group">
+						<div class="Label--switch">
+							<input type="checkbox" name="switch2" id="mSwitch2">
+							<label for="mSwitch2" class="switch"></label>
+						</div>
+						<label for="mSwitch2">Lock board</label>
+					</div>
+					<div class="AdvanceUI--config-group">
+						<div class="Label--switch">
+							<input type="checkbox" name="switch2" id="mSwitch3">
+							<label for="mSwitch3" class="switch"></label>
+						</div>
+						<label for="mSwitch3">Lock node</label>
+					</div>
+				</div>
+				<div class="AdvanceUI-mobile--config__sound-icon-container">
+					<img src="/img/icons/sound.svg" alt="Sound Icon" class="AdvanceUI-mobile--config__sound-icon">
+					<span>Sound on/off</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="StatisticsModal hidden" id="StatisticsModal">
+		<div class="StatisticsModal--container">
+			<div class="StatisticsModal--close">
+				<h4 class="StatisticsModal--close__title">Statistics</h4>
+				<svg width="24" height="24" class="StatisticsModal--close__icon" id="closeIconStatisticsModal"
+					viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M24 2.41714L21.5829 0L12 9.58286L2.41714 0L0 2.41714L9.58286 12L0 21.5829L2.41714 24L12 14.4171L21.5829 24L24 21.5829L14.4171 12L24 2.41714Z"
+						fill="#ffffff" />
+				</svg>
+			</div>
+			<div class="StatisticsModal--principal-content">
+				<h3 class="StatisticsModal--principal-content__title">
+					Pokermaster 10/20/40 No Ante 8000 Stack
+				</h3>
+				<div class="StatisticsModal--info">
+					<span class="StatisticsModal--info__total">
+						Total hands: 100
+					</span>
+					<span class="StatisticsModal--info__strek">
+						Highest streak: 25
+					</span>
+				</div>
+				<div class="StatisticsModal--btns">
+					<div class="Btn green">Correct 40%</div>
+					<div class="Btn yellow">Small error 30%</div>
+					<div class="Btn orange">Large error 20%</div>
+					<div class="Btn red">Blunder 10%</div>
+				</div>
+				<div class="StatisticsModal__postflop">
+					Postflop EV Loss: -4.3 bb/100
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/js/main.js"></script>
+</body>
+
+</html>

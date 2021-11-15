@@ -1,0 +1,42 @@
+.OptionsDesktop {
+	display: none;
+	position: relative;
+}
+
+.OptionsDesktop--option-container {
+	margin: 0 auto;
+	width: 120px;
+	display: grid;
+	grid-gap: 0.7rem;
+}
+
+.OptionsDesktop--option {
+	background-color: #fff;
+	padding: .5rem;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.OptionsDesktop--option.simulation {
+	font-size: 10px;
+}
+
+.OptionsDesktop--option__icon {
+	margin-right: 0.5rem;
+}
+
+
+@media screen and (min-width: 1280px) {
+	.OptionsDesktop {
+		display: flex;
+		justify-content: flex-end;
+		padding-right: 1rem;
+	}
+
+	.OptionsDesktop--container {
+		position: relative;
+	}
+}

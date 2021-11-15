@@ -1,0 +1,324 @@
+.Table {
+	margin: 0 auto;
+	margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1280px) {
+	.Table {
+		position: absolute;
+		top: 0;
+		left: -2%;
+	}
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+	.Table {
+		position: initial;
+	}
+
+	.Table--info-pot {
+		font-size: 12px;
+	}
+}
+
+
+@media screen and (min-width: 1280px),
+screen and (orientation: portrait) {
+	.Table {
+		position: initial;
+	}
+}
+
+
+.Table .Table--container {
+	position: relative;
+	width: 85%;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 823px) {
+	.Table .Table--container {
+		width: 95%;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.Table--container-container {
+		position: relative;
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.Table .Table--container {
+		width: 90%;
+	}
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+	.Table .Table--container {
+		width: 100%;
+	}
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+	.Table .Table--container {
+		width: 110%;
+		left: -5%;
+	}
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+	.Table .Table--container {
+		width: 160%;
+		left: -30%;
+	}
+}
+
+.Table__img {
+	filter: drop-shadow(0px 4px 100px rgba(56, 244, 244, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 100px rgba(56, 244, 244, 0.25)) drop-shadow(0px 4px 100px rgba(56, 244, 244, 0.25));
+	width: 100%;
+}
+
+.Table__img.landscape {
+	display: none;
+}
+
+@media screen and (min-width: 1024px),
+screen and (orientation: landscape) {
+	.Table__img.landscape {
+		display: block;
+	}
+
+	.Table__img.portrait {
+		display: none;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.Table__img.landscape {
+		display: none;
+	}
+
+	.Table__img.portrait {
+		display: block;
+	}
+}
+
+.Table--info {
+	top: 14%;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	color: #fff;
+	font-weight: 700;
+	z-index: 99;
+}
+
+.Table--info>* {
+	display: block;
+	text-align: left;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.Table--info-container {
+	display: flex;
+	justify-content: center;
+}
+
+.Table--info-pot {
+	background-color: rgba(34, 34, 34, 0.5);
+	border-radius: 35px;
+	padding: 0.5rem .7rem;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	margin-bottom: 0.2rem;
+}
+
+
+.Table--info__pocket {
+	width: 41px;
+	margin-bottom: .7rem;
+}
+
+.Table--cards {
+	position: absolute;
+	top: -1rem;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Table--cards-container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: .5rem;
+}
+
+@media screen and (min-width: 1024px) {
+	.Table--info {
+		top: 16%;
+	}
+}
+
+.Table--card {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(196, 196, 196, .4);
+	box-shadow: inset 0 0 0 1px #ffffff;
+	border-radius: 2px;
+}
+
+.Table--card__card {
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(2.44444px 1.22222px 12.2222px rgba(14, 254, 254, 0.5));
+}
+
+@media screen and (max-width: 768px) {
+	.Table--cards-container {
+		width: 85%;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.Table--info {
+		top: 10%;
+	}
+
+	.Table--cards {
+		top: .5rem;
+	}
+
+	.Table--cards-container {
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 823px) {
+	.Table--info {
+		top: 13%;
+	}
+
+	.Table--info-pot {
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 667px) {
+	.Table--info-pot {
+		font-size: 8px;
+	}
+
+	.Table--info__pocket {
+		width: 30px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.Table {
+		width: 90%;
+		display: flex;
+		align-items: center;
+	}
+
+	.Table--cards {
+		top: .5rem;
+	}
+
+	.Table--cards-container {
+		width: 40%;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.Table {
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	.Table .Table--container {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 0;
+		left: 0;
+		height: 100%;
+	}
+
+	.Table--img-container {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.Table {
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	.Table .Table--container {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 0;
+		left: -30%;
+		width: 160%;
+		height: 100%;
+	}
+}
+
+@media (orientation: portrait) and (max-width: 823px) {
+	.Table--info {
+		top: 18%;
+	}
+
+	.Table--info-pot {
+		padding: 0.2rem 0.35rem;
+	}
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+	.Table--info {
+		top: 18%;
+	}
+
+	.Table--info-pot {
+		margin-bottom: 1.6rem;
+	}
+}
+
+@media (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+	.Table--info-pot {
+		margin-bottom: .5rem;
+	}
+
+	.Table--info {
+		top: 18.5%;
+	}
+}
+
+@media (min-width: 667px) and (max-height: 375px) {
+	.Table--info-pot {
+		font-size: 10px;
+		margin-bottom: .5rem;
+	}
+
+	.Table--info__pocket {
+		width: 30px;
+	}
+}
+
+@media (max-width: 568px) and (max-height: 320px) {
+	.Table--info {
+		top: 12%;
+	}
+}

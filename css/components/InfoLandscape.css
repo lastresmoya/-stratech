@@ -1,0 +1,129 @@
+.InfoLandscape {
+	display: none;
+}
+
+.InfoLandscape .Btn {
+	font-size: 12px;
+}
+
+@media screen and (min-width: 1024px),
+screen and (orientation: landscape) {
+	.InfoLandscape {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 2rem 1rem 1rem;
+		padding-bottom: 0;
+	}
+
+	.InfoLandscape--title {
+		background-color: rgba(255, 255, 255, .05);
+		padding: .5rem .7rem;
+		border-radius: 10px;
+		font-size: 1.1rem;
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 16px;
+		display: grid;
+		gap: .5rem;
+	}
+
+	.InfoLandscape--score,
+	.InfoLandscape--streak {
+		display: grid;
+		gap: .5rem;
+		grid-template-columns: 20% 80%;
+	}
+
+	.InfoLandscape--score__score,
+	.InfoLandscape--streak__streak {
+		font-size: 8px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+
+	.InfoLandscape--streak__streak {
+		font-size: 7.5px;
+	}
+
+	.InfoLandscape--score__icon,
+	.InfoLandscape--streak__icon {
+		max-width: 100%;
+	}
+
+	.InfoLandscape--score__percenter {
+		font-weight: normal;
+	}
+
+	.InfoLandscape--options-btn {
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
+	}
+
+	.InfoLandscape--options-btn .Btn {
+		margin: 0;
+	}
+}
+
+@media (orientation: landscape) and (min-width: 824px) {
+	.InfoLandscape {
+		justify-content: flex-end;
+	}
+
+	.InfoLandscape--title {
+		display: none;
+	}
+
+	.InfoLandscape--options-btn {
+		display: none;
+	}
+}
+
+@media (orientation: landscape) and (max-width: 736px) {
+	.InfoLandscape--title {
+		font-size: 14px;
+	}
+
+	.InfoLandscape--score__score {
+		font-size: 7px;
+	}
+
+	.InfoLandscape--score__icon,
+	.InfoLandscape--streak__icon {
+		max-width: 100%;
+	}
+}
+
+@media (orientation: landscape) and (max-width: 667px) {
+	.InfoLandscape--title {
+		font-size: 14px;
+	}
+
+	.InfoLandscape--score__score,
+	.InfoLandscape--streak__streak {
+		font-size: 6px;
+	}
+
+	.InfoLandscape--score__icon,
+	.InfoLandscape--streak__icon {
+		max-width: 90%;
+	}
+}
+
+@media (orientation: landscape) and (max-width: 666px) {
+
+	.InfoLandscape--score__score,
+	.InfoLandscape--streak__streak {
+		font-size: 5px;
+	}
+}
+
+@media screen and (min-width: 1280px),
+screen and (orientation: portrait) {
+	.InfoLandscape {
+		display: none;
+	}
+}

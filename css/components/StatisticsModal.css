@@ -1,0 +1,86 @@
+.StatisticsModal {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(4, 4, 4, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	transition: .3s opacity;
+}
+
+.StatisticsModal.hidden {
+	opacity: 0;
+}
+
+.StatisticsModal--container {
+	background-color: #1B2B37;
+	background-image: url(../../img/bgAdvanceUI.png);
+	background-size: cover;
+	width: 360px;
+	max-height: 90%;
+	overflow-y: auto;
+	padding: 1rem;
+	color: #fff;
+}
+
+.StatisticsModal--close {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 24px;
+	margin-bottom: .75rem;
+}
+
+.StatisticsModal--close__title {
+	text-align: center;
+	width: 100%;
+}
+
+.StatisticsModal--close__icon {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 18px;
+}
+
+.StatisticsModal--principal-content {
+	padding: 0 .5rem;
+}
+
+.StatisticsModal--principal-content__title {
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 1rem;
+}
+
+.StatisticsModal--info {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+.StatisticsModal--btns {
+	display: grid;
+	gap: .5rem;
+	margin-bottom: 2.5rem;
+}
+
+.StatisticsModal--btns .Btn {
+	border-radius: 5px;
+	max-width: initial;
+	cursor: initial;
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.StatisticsModal__postflop {
+	text-align: center;
+	margin-bottom: 1rem;
+}

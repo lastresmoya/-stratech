@@ -1,0 +1,613 @@
+/* Orders */
+.order-one {
+	left: -25%;
+	top: 20%;
+}
+
+.order-two {
+	left: -25%;
+	top: 60%;
+}
+
+.order-one,
+.order-two {
+	padding-left: var(--padding-money);
+	padding-right: .3rem;
+}
+
+.order-one .Player--money,
+.order-two .Player--money {
+	padding-left: var(--padding-money);
+	padding-right: .3rem;
+}
+
+.order-three {
+	right: -25%;
+	top: 60%;
+}
+
+.order-four {
+	right: -25%;
+	top: 20%;
+}
+
+.order-three,
+.order-four {
+	padding-right: var(--padding-money);
+	padding-left: .3rem;
+}
+
+.order-three .Player--money,
+.order-four .Player--money {
+	padding-right: var(--padding-money);
+	padding-left: .3rem;
+	left: initial;
+	right: 80%;
+}
+
+.order-three .Player--cards,
+.order-four .Player--cards {
+	right: initial;
+	left: 0;
+}
+
+.order-three .Player--lock,
+.order-four .Player--lock {
+	right: var(--lock-separation);
+	left: initial;
+}
+
+.order-one .Player--cards>img:nth-child(2),
+.order-two .Player--cards>img:nth-child(2) {
+	top: 10%;
+	left: 50%;
+}
+
+.order-one .Player--cards>img:nth-child(3),
+.order-two .Player--cards>img:nth-child(3) {
+	top: 20%;
+	left: 100%;
+}
+
+.order-one .Player--cards>img:nth-child(4),
+.order-two .Player--cards>img:nth-child(4) {
+	top: 30%;
+	left: 150%;
+}
+
+.order-one .Player--cards>img:nth-child(5),
+.order-two .Player--cards>img:nth-child(5) {
+	top: 40%;
+	left: 200%;
+}
+
+.order-three .Player--cards,
+.order-four .Player--cards {
+	right: initial;
+	left: 0;
+}
+
+.order-three .Player--cards>img:nth-child(2),
+.order-four .Player--cards>img:nth-child(2) {
+	right: 50%;
+	left: initial;
+}
+
+.order-three .Player--cards>img:nth-child(3),
+.order-four .Player--cards>img:nth-child(3) {
+	right: 100%;
+	left: initial;
+}
+
+.order-three .Player--cards>img:nth-child(4),
+.order-four .Player--cards>img:nth-child(4) {
+	right: 150%;
+	left: initial;
+}
+
+.order-three .Player--cards>img:nth-child(5),
+.order-four .Player--cards>img:nth-child(5) {
+	right: 200%;
+	left: initial;
+}
+
+@media screen and (orientation: landscape) {
+	.order-one {
+		top: initial;
+		left: 20%;
+		bottom: -5%;
+	}
+
+	.order-two {
+		top: initial;
+		left: 70%;
+		bottom: -5%;
+	}
+
+	.order-three {
+		right: initial;
+		left: 70%;
+		top: -5%;
+	}
+
+	.order-four {
+		right: initial;
+		left: 20%;
+		top: -5%;
+	}
+
+	.order-one,
+	.order-four {
+		padding-left: var(--padding-money);
+		padding-right: .3rem;
+	}
+
+	.order-two,
+	.order-three {
+		padding-right: var(--padding-money);
+		padding-left: .3rem;
+	}
+
+	.order-one .Player--lock,
+	.order-four .Player--lock {
+		left: var(--lock-separation);
+		right: initial;
+	}
+
+	.order-one .Player--money,
+	.order-four .Player--money {
+		padding-left: var(--padding-money);
+		padding-right: .3rem;
+		left: 80%;
+		right: initial;
+	}
+
+	.order-one .Player--cards,
+	.order-four .Player--cards {
+		right: 0;
+		left: initial;
+	}
+
+	.order-two .Player--lock,
+	.order-three .Player--lock {
+		right: var(--lock-separation);
+		left: initial;
+	}
+
+	.order-one .Player--money,
+	.order-four .Player--money {
+		padding-left: var(--padding-money);
+		padding-right: .3rem;
+	}
+
+	.order-two .Player--money,
+	.order-three .Player--money {
+		padding-right: var(--padding-money);
+		padding-left: .3rem;
+		right: 80%;
+		left: initial;
+	}
+
+	.order-one .Player--cards,
+	.order-four .Player--cards {
+		left: initial;
+		right: 0;
+	}
+
+	.order-two .Player--cards,
+	.order-three .Player--cards {
+		right: initial;
+		left: 0;
+	}
+
+	.order-one .Player--cards>img:nth-child(2),
+	.order-four .Player--cards>img:nth-child(2) {
+		left: 50%;
+		right: initial;
+	}
+
+	.order-one .Player--cards>img:nth-child(3),
+	.order-four .Player--cards>img:nth-child(3) {
+		left: 100%;
+		right: initial;
+	}
+
+	.order-one .Player--cards>img:nth-child(4),
+	.order-four .Player--cards>img:nth-child(4) {
+		left: 150%;
+		right: initial;
+	}
+
+	.order-one .Player--cards>img:nth-child(5),
+	.order-four .Player--cards>img:nth-child(5) {
+		left: 200%;
+		right: initial;
+	}
+
+	.order-two .Player--cards,
+	.order-three .Player--cards {
+		right: initial;
+		left: 0;
+	}
+
+	.order-two .Player--cards>img:nth-child(2),
+	.order-three .Player--cards>img:nth-child(2) {
+		right: 50%;
+		left: initial;
+	}
+
+	.order-two .Player--cards>img:nth-child(3),
+	.order-three .Player--cards>img:nth-child(3) {
+		right: 100%;
+		left: initial;
+	}
+
+	.order-two .Player--cards>img:nth-child(4),
+	.order-three .Player--cards>img:nth-child(4) {
+		right: 150%;
+		left: initial;
+	}
+
+	.order-two .Player--cards>img:nth-child(5),
+	.order-three .Player--cards>img:nth-child(5) {
+		right: 200%;
+		left: initial;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.order-one {
+		bottom: -5%;
+	}
+
+	.order-two {
+		top: initial;
+		bottom: -5%;
+	}
+
+	.order-three {
+		top: -5%;
+	}
+
+	.order-four {
+		top: -5%;
+		right: initial;
+	}
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+	.order-one {
+		left: -15%;
+		top: 20%;
+		bottom: initial;
+	}
+
+	.order-two {
+		left: -15%;
+		top: 60%;
+		bottom: initial;
+	}
+
+	.order-three {
+		right: -15%;
+		top: 60%;
+		left: initial;
+	}
+
+	.order-four {
+		right: -15%;
+		top: 20%;
+		left: initial;
+	}
+}
+
+/* Tokens Orders */
+
+/* Portraid */
+
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens,
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: 40%;
+	}
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens {
+		right: -120%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		left: -120%;
+		right: initial;
+	}
+}
+
+@media (max-width: 768px) and (max-height: 1024px) {
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens,
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: 40%;
+	}
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens {
+		right: -190%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		left: -190%;
+		right: initial;
+	}
+}
+
+@media (max-height: 960px) and (max-width: 600px) {
+	.Table--info {
+		top: 14%;
+	}
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens,
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: 40%;
+	}
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens {
+		right: -160%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		left: -160%;
+		right: initial;
+	}
+}
+
+@media (max-width: 823px) and (max-width: 375px) {
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens,
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: 40%;
+	}
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens {
+		right: -150%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		left: -150%;
+		right: initial;
+	}
+}
+
+@media (max-height: 736px) and (max-width: 414px) {
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens,
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: 55%;
+	}
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens {
+		right: -210%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		left: -210%;
+		right: initial;
+	}
+}
+
+@media (max-height: 667px) and (max-width: 375px) {
+
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens,
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: 40%;
+	}
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens {
+		right: -150%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		left: -150%;
+		right: initial;
+	}
+}
+
+/* Landscape */
+
+@media screen and (orientation: landscape) {
+
+	.order-one .Player--tokens,
+	.order-two .Player--tokens {
+		top: -130%;
+		bottom: initial;
+	}
+
+	.order-two .Player--tokens {
+		top: -120%;
+	}
+
+	.order-one .Player--tokens,
+	.order-four .Player--tokens {
+		right: -10%;
+	}
+
+	.order-two .Player--tokens,
+	.order-three .Player--tokens {
+		left: -65%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: initial;
+		bottom: -130%;
+	}
+}
+
+@media (max-width: 823px) and (max-height: 411px) {
+
+	.order-one .Player--tokens {
+		top: -100%;
+	}
+
+	.order-two .Player--tokens {
+		top: -90%;
+		bottom: initial;
+	}
+
+	.order-one .Player--tokens,
+	.order-four .Player--tokens {
+		right: -35%;
+	}
+
+	.order-two .Player--tokens,
+	.order-three .Player--tokens {
+		left: -65%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: initial;
+		bottom: -110%;
+	}
+}
+
+@media (max-width: 736px) and (max-height: 414px) {
+
+	.order-one .Player--tokens {
+		top: -85%;
+	}
+
+	.order-two .Player--tokens {
+		top: -75%;
+		bottom: initial;
+	}
+
+	.order-one .Player--tokens,
+	.order-four .Player--tokens {
+		right: -15%;
+		left: initial;
+	}
+
+	.order-two .Player--tokens,
+	.order-three .Player--tokens {
+		left: -75%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: initial;
+		bottom: -85%;
+	}
+}
+
+@media (max-width: 667px) and (max-height: 375px) {
+	.order-one .Player--tokens {
+		top: -105%;
+	}
+
+	.order-two .Player--tokens {
+		top: -90%;
+		bottom: initial;
+	}
+
+	.order-one .Player--tokens,
+	.order-four .Player--tokens {
+		right: -35%;
+	}
+
+	.order-two .Player--tokens,
+	.order-three .Player--tokens {
+		left: -65%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: initial;
+		bottom: -110%;
+	}
+}
+
+@media (max-width: 568px) and (max-height: 320px) {
+
+	.order-one,
+	.order-two {
+		bottom: -10%;
+	}
+
+	.order-one .Player--tokens {
+		top: -105%;
+		bottom: initial;
+	}
+
+	.order-two .Player--tokens {
+		top: -90%;
+		bottom: initial;
+	}
+
+	.order-one .Player--tokens,
+	.order-four .Player--tokens {
+		right: -35%;
+	}
+
+	.order-two .Player--tokens,
+	.order-three .Player--tokens {
+		left: -65%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: initial;
+		bottom: -90%;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+
+	.order-one .Player--tokens {
+		top: -240%;
+	}
+
+	.order-two .Player--tokens {
+		top: -230%;
+		bottom: initial;
+	}
+
+	.order-one .Player--tokens,
+	.order-four .Player--tokens {
+		right: -35%;
+	}
+
+	.order-two .Player--tokens,
+	.order-three .Player--tokens {
+		left: -65%;
+	}
+
+	.order-three .Player--tokens,
+	.order-four .Player--tokens {
+		top: initial;
+		bottom: -250%;
+	}
+}

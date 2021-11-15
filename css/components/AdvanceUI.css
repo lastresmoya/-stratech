@@ -1,0 +1,113 @@
+label {
+	cursor: pointer;
+}
+
+input[type="checkbox"] {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	display: none;
+}
+
+label.switch {
+	padding: 0.5rem .1rem;
+	display: block;
+	width: 30px;
+	height: 20px;
+	background-color: #019DFE;
+	border-radius: 70px;
+	cursor: pointer;
+	transition: 0.5s;
+	position: relative;
+}
+
+label.switch::after {
+	content: "";
+	width: 15px;
+	height: 80%;
+	background-color: #e8f5f7;
+	position: absolute;
+	border-radius: 70px;
+	top: 10%;
+	transition: 0.2s;
+	left: 0;
+}
+
+input:checked+label.switch::after {
+	transform: translateX(100%);
+}
+
+input:checked+label {
+	background-color: #CBD4E1;
+}
+
+.AdvanceUI {
+	width: 120px;
+	padding: .5rem;
+	background-color: rgba(255, 255, 255, .05);
+	border-radius: 2px;
+	color: #fff;
+}
+
+.AdvanceUI--header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.AdvanceUI--header__title {
+	font-weight: bold;
+	font-size: 13.05px;
+}
+
+.AdvanceUI--config {
+	align-self: center;
+	display: grid;
+	grid-template-columns: repeat(1, auto);
+	gap: 0.7rem;
+	font-size: 11px;
+	max-height: 0;
+	overflow: hidden;
+	transition: .5s all;
+}
+
+.AdvanceUI--config-group {
+	cursor: pointer;
+	align-items: center;
+	display: grid;
+	grid-template-columns: 25% 75%;
+	gap: 0.7rem;
+}
+
+.AdvanceUI--config-group:nth-child(4)>span {
+	font-size: 9px;
+}
+
+.AdvanceUI--config-group:last-child>span {
+	font-size: 10px;
+}
+
+.AdvanceUI--config.desactive {
+	margin-top: 1rem;
+}
+
+.AdvanceUI--config__sound-icon-container {
+	display: flex;
+	align-items: center;
+}
+
+.AdvanceUI--config__sound-icon {
+	margin: 0 auto;
+	width: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.AdvanceUI--header__toggle.active {
+	display: block;
+}
+
+.AdvanceUI--header__toggle {
+	display: none;
+}
