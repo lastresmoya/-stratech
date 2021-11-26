@@ -279,7 +279,7 @@
 	}
 }
 
-@media (orientation: landscape) and (min-width: 1920px) {
+@media (orientation: landscape) and (min-width: 1580px) {
 	.order-one {
 		left: 45%;
 	}
@@ -706,9 +706,10 @@
 	}
 }
 
-@media screen and (min-width: 1920px) {
+
+@media screen and (min-width: 1440px) {
 	.order-one .Player--tokens {
-		top: -210%;
+		top: -120%;
 	}
 
 	.order-one .Player--tokens {
@@ -722,15 +723,15 @@
 
 	.order-three .Player--tokens,
 	.order-four .Player--tokens {
-		top: 290%;
+		top: 220%;
 	}
 
 	.order-two .Player--tokens {
-		left: -300%;
+		left: -240%;
 	}
 
 	.order-five .Player--tokens {
-		right: -300%;
+		right: -240%;
 	}
 
 	.order-three .Player--tokens {

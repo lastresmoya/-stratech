@@ -1035,7 +1035,7 @@
 
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1440px) {
 
 	.order-one .Player--tokens,
 	.order-five .Player--tokens {
@@ -1044,12 +1044,12 @@
 
 	.order-one .Player--tokens,
 	.order-nine .Player--tokens {
-		right: -320%;
+		right: -260%;
 	}
 
 	.order-five .Player--tokens,
 	.order-six .Player--tokens {
-		left: -320%;
+		left: -260%;
 	}
 
 	.order-six .Player--tokens,
@@ -1060,7 +1060,7 @@
 	.order-two .Player--tokens,
 	.order-three .Player--tokens,
 	.order-four .Player--tokens {
-		top: -200%;
+		top: -120%;
 	}
 
 	.order-two .Player--tokens,
@@ -1079,6 +1079,6 @@
 
 	.order-seven .Player--tokens,
 	.order-eight .Player--tokens {
-		bottom: -200%;
+		bottom: -120%;
 	}
 }

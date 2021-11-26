@@ -532,9 +532,9 @@
 	}
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1440px) {
 	.order-one .Player--tokens {
-		top: -260%;
+		top: -170%;
 		bottom: initial;
 	}
 
@@ -550,10 +550,10 @@
 	}
 
 	.order-two .Player--tokens {
-		left: -310%;
+		left: -220%;
 	}
 
 	.order-three .Player--tokens {
-		right: -310%;
+		right: -220%;
 	}
 }

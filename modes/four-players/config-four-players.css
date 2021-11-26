@@ -441,12 +441,12 @@
 
 	.order-one .Player--tokens,
 	.order-two .Player--tokens {
-		top: -130%;
+		top: -110%;
 		bottom: initial;
 	}
 
 	.order-two .Player--tokens {
-		top: -120%;
+		top: -100%;
 	}
 
 	.order-one .Player--tokens,
@@ -462,7 +462,7 @@
 	.order-three .Player--tokens,
 	.order-four .Player--tokens {
 		top: initial;
-		bottom: -130%;
+		bottom: -110%;
 	}
 }
 
@@ -584,14 +584,14 @@
 	}
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1440px) {
 
 	.order-one .Player--tokens {
-		top: -240%;
+		top: -150%;
 	}
 
 	.order-two .Player--tokens {
-		top: -230%;
+		top: -140%;
 		bottom: initial;
 	}
 
@@ -608,6 +608,6 @@
 	.order-three .Player--tokens,
 	.order-four .Player--tokens {
 		top: initial;
-		bottom: -250%;
+		bottom: -150%;
 	}
 }

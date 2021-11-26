@@ -164,7 +164,7 @@
 	}
 }
 
-@media (orientation: landscape) and (max-width: 665px) {
+@media (orientation: landscape) and (max-width: 700px) {
 	.Collapse--preflop__text {
 		font-size: 10px;
 	}

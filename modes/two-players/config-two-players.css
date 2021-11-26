@@ -347,7 +347,8 @@ screen and (orientation: landscape) {
 	}
 }
 
-@media screen and (min-width: 1920px) {
+
+@media screen and (min-width: 1440px) {
 
 	.order-one .Player--tokens,
 	.order-two .Player--tokens {
@@ -357,10 +358,10 @@ screen and (orientation: landscape) {
 	}
 
 	.order-one .Player--tokens {
-		right: -280%;
+		right: -240%;
 	}
 
 	.order-two .Player--tokens {
-		left: -280%;
+		left: -240%;
 	}
 }

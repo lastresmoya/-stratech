@@ -147,7 +147,7 @@
 	}
 }
 
-@media (orientation: landscape) and (min-width: 1025px) {
+@media (orientation: landscape) and (min-width: 1280px) {
 	.HandCard--header {
 		display: block;
 	}
@@ -186,7 +186,7 @@
 
 @media screen and (orientation: portrait) {
 	.HandCard--preflop__cards {
-		width: 55%;
+		width: 40%;
 	}
 }
 

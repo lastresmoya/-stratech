@@ -242,6 +242,28 @@ screen and (orientation: landscape) {
 	}
 }
 
+@media screen and (min-width: 1440px) {
+	.Player--img {
+		--size: 3rem;
+	}
+
+	.Player--money {
+		top: 14%;
+	}
+
+	.Player--money>* {
+		font-size: 1rem;
+	}
+
+	.Player--container {
+		--padding-money: .7rem;
+	}
+
+	.Player--lock__icon {
+		width: 1.5rem;
+	}
+}
+
 @media (orientation: portrait) and (min-width: 1024px) {
 	.Player--container {
 		--padding-money: 1.2rem;

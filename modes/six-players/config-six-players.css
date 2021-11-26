@@ -844,24 +844,24 @@
 	}
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1440px) {
 
 	.order-one .Player--tokens,
 	.order-four .Player--tokens {
-		top: 40%;
+		top: 60%;
 	}
 
 	.order-one .Player--tokens {
-		right: -350%;
+		right: -220%;
 	}
 
 	.order-four .Player--tokens {
-		left: -350%;
+		left: -220%;
 	}
 
 	.order-three .Player--tokens,
 	.order-two .Player--tokens {
-		top: -190%;
+		top: -120%;
 	}
 
 	.order-three .Player--tokens,
@@ -876,6 +876,6 @@
 
 	.order-six .Player--tokens,
 	.order-five .Player--tokens {
-		bottom: -190%;
+		bottom: -120%;
 	}
 }

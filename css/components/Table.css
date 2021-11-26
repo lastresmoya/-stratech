@@ -257,7 +257,7 @@ screen and (orientation: landscape) {
 	}
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1580px) {
 	.Table {
 		width: 100%;
 		position: relative;
@@ -275,6 +275,19 @@ screen and (orientation: landscape) {
 		height: 100%;
 	}
 }
+
+@media screen and (min-width: 1440px) {
+	.Table .Table--container {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 0;
+		left: -20%;
+		width: 140%;
+		height: 100%;
+	}
+}
+
 
 @media (orientation: portrait) and (max-width: 823px) {
 	.Table--info {
